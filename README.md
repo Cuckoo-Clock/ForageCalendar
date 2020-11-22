@@ -7,6 +7,12 @@
 
 ### TODOS to dos
 - [ ] work on favicon
+- [ ] weather api
+- [ ] location api
+- [ ] modal on scroll
+- [ ] javascript calendar scrolling
+- [ ] id form
+
 
 
 ### 1. Introduction
