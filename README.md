@@ -5,6 +5,10 @@
 ####  [Market Survey](#market-survey)
 ####  [References](#references)
 
+### TODOS to dos
+[ ] work on favicon
+
+
 ### 1. Introduction
 
 The Website will offer a simple calendar & guide for seasonal foraging in RI.
