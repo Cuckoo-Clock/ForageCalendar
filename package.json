@@ -1,0 +1,23 @@
+{
+  "name": "foragerOne",
+  "version": "1.0.0",
+  "description": "a website to assist in foraging mushrooms in RI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "author": "Andrew Oesch",
+  "license": "ISC",
+  "devDependencies": {
+    "install": "^0.13.0",
+    "lite-server": "^2.5.4",
+    "npm": "^6.14.9"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
