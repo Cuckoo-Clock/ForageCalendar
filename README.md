@@ -6,7 +6,7 @@
 ####  [References](#references)
 
 ### TODOS to dos
-[ ] work on favicon
+- [ ] work on favicon
 
 
 ### 1. Introduction
