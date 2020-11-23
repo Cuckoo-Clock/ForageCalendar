@@ -91,3 +91,21 @@ var canOnlyFireOnce = once(function() {
 
 canOnlyFireOnce(); // "Fired!"
 canOnlyFireOnce(); // nada
+
+
+// JSON PARSING ZONE
+// make a function to return values?
+
+// var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+// var myObj = JSON.parse(myJSON);
+// document.getElementById("demo").innerHTML = myObj.name;
+
+///////////////////////////
+lookupMushroom();
+async function lookupMushroom(){
+    const response = await fetch("mushroomIndex.json");
+    const data = await response.json();
+    console.log(data);
+}
+
+https://www.youtube.com/watch?v=uxf0--uiX0I

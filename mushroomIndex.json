@@ -1,0 +1,40 @@
+{"mushrooms":[
+    {
+        "binomial": "Grifola frondosa",
+        "names": ["hen-of–the-woods","maitake","ram's head","sheep's head"],
+        "order":"polyporales",
+        "photo":"assets/mushrooms/grifolaFrondosa/main.jpg",
+        "photos":["photo1","photo2"],
+        "description":{
+            "habitat":"by oaks, on wood at the base of trees",
+            "characteristics":"brown gray, multiple fronds, 3-8lbs. pores, appears in mid-late autumn, cool weather. not many look alikes"
+        },
+        "dangerFlag":"none",
+        "lookAlikes":"berkley's polypore",
+        "edibility":["worth eating","edible","inedible","poisonous"],
+        "cooking":{
+            "notes":"delicious,can be lightly sauteed and frozen, good as a main",
+            "recipes":["https://www.bonappetit.com/recipe/seared-maitake-mushrooms","https://veganinthefreezer.com/grilled-thai-marinated-maitake-mushrooms/"]
+        },
+        "resources":"links"
+    },
+    {
+        "binomial": "Number2 frondosa",
+        "names": ["hen-of–the-woods","maitake","ram's head","sheep's head"],
+        "order":"polyporales",
+        "photo":"assets/mushrooms/grifolaFrondosa/main.jpg",
+        "photos":["photo1","photo2"],
+        "description":{
+            "habitat":"by oaks, on wood at the base of trees",
+            "characteristics":"brown gray, multiple fronds, 3-8lbs. pores, appears in mid-late autumn, cool weather. not many look alikes"
+        },
+        "dangerFlag":"none",
+        "lookAlikes":"berkley's polypore",
+        "cooking":{
+            "notes":"delicious,can be lightly sauteed and frozen, good as a main",
+            "recipes":["https://www.bonappetit.com/recipe/seared-maitake-mushrooms","https://veganinthefreezer.com/grilled-thai-marinated-maitake-mushrooms/"]
+        },
+        "resources":"links"
+    }
+
+]}
