@@ -3,26 +3,75 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+        <meta name="descriptio" content="webpage for assiting in mushroom foraging in Rhode Island">
+        <meta name="author" content="Andrew Oesch">
+
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles.css">
         
         <title>RI Mushroom Forager</title>
         <!-- favicons -->
         <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700;800&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,600;1,900&family=Quicksand:wght@300;400&family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
         <!-- svg favicon only, add back up and safari compatible -->
         <!-- <link rel="mask-icon" href="mask-icon.svg" color="#000000"> -->
     </head>
     <body>
-        <img src="assets/favicon.svg" alt=""/> 
+        <header class="jumbotron jumbotron-fluid" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm mx-3">
+                        <h2>Rhode Island <h2>
+                        <h1> Mushroom Foraging Calendar</h1>
+                    </div> 
+                </div>
+            </div>
+        </header>
+        
+        <!-- css grid? -->
+        <nav class="navbar navbar-dark">        
+            <div class="container">
+                <div class="row">
+                    <div class="col  justify-content-end">
+                        <ul class="navbar-nav anchor">
+                            <li class="nav-item active mr-1"><a href="#"><h3>Calendar<h3></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </nav>
+
+        
+
+        
+        
+        
+        <footer>
+
+            <!-- weather api -->
+            <!-- location api opens map modal-->
+            <link rel="stylesheet" href="#" onclick="#" data-toggle="map">map</link>
+        </footer>
+
+        <div class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1><italic>it's a map</italic></h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2>hej.</h2>
+                        <button id = "find-me">Show my location</button><br/>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="scriptz.js"></script>
     </body>
-    <footer>
-
-    </footer>
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
 </html>

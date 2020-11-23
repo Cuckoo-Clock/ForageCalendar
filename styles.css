@@ -1,0 +1,36 @@
+html{
+    height: 100%;
+}
+body{
+    background-image:linear-gradient(0deg, orange 30%, pink, white) ;
+    margin: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    /* not sure which are necessary */
+    /*  https://stackoverflow.com/questions/27623777/how-to-not-repeat-a-css-background-gradient/27623904
+        https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats
+    
+        https://forum.freecodecamp.org/t/solved-preventing-a-gradient-background-from-repeating/74090 */
+}
+
+.jumbotron{
+    font-family: 'BioRhyme', serif;
+    background-color: transparent;
+}
+
+/* FONTS */
+/* font-family: 'BioRhyme', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Vollkorn', serif; */
+
+.anchor{
+    font-family: 'BioRhyme', serif;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    text-orientation: sideways;
+    /* position: fixed; */
+    /* text-align: right; <-- not doing anything */
+
+}
