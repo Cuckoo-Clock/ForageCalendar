@@ -12,6 +12,7 @@
 - [ ] modal on scroll
 - [ ] javascript calendar scrolling
 - [ ] id form
+- [ ] figure out photo attributions tracking, and sourcing photos
 
 
 
