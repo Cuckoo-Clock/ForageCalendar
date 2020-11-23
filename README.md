@@ -13,6 +13,7 @@
 - [ ] javascript calendar scrolling
 - [ ] id form
 - [ ] figure out photo attributions tracking, and sourcing photos
+- [ ] in json, automate appending the directory for puling image files
 
 
 
