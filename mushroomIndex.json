@@ -19,20 +19,22 @@
         "resources":"links"
     },
     {
-        "binomial": "Number2 frondosa",
-        "names": ["hen-of–the-woods","maitake","ram's head","sheep's head"],
+        "binomial": "Laetiporus sulphureus",
+        "names": ["chicken-of-the-woods,crab-of-the-woods,sulphur shelf"],
         "order":"polyporales",
-        "photo":"assets/mushrooms/grifolaFrondosa/main.jpg",
+        "photo":"assets/mushrooms/laetiporusSulphureus/main.jpg",
         "photos":["photo1","photo2"],
         "description":{
-            "habitat":"by oaks, on wood at the base of trees",
-            "characteristics":"brown gray, multiple fronds, 3-8lbs. pores, appears in mid-late autumn, cool weather. not many look alikes"
+            "habitat":"grows on dead or aging hardwoods,Quercus/Oak,Prunus/Cherry, Pyrus/Pear, Populus/Poplar,aspen, cottonwood, Salix/willow, Robinia/locust Fagus/beech",
+            "characteristics":"appears in mid to late summer through mid-autumn. growing in large clusters ",
+            "notes":"Grows on trunk of tree from base all the way up, overlapping flaps, yellow and orange, begining lobbed and then becoming fanned. It is a saprophyte or weak parasite causing cubical heartwood rot",
+            "spore-print":"white"
         },
-        "dangerFlag":"none",
-        "lookAlikes":"berkley's polypore",
+        "dangerFlag":"mild, shouldn't be eaten raw, gastointestinal upset is reported",
+        "lookAlikes":"The jackolantern, primary differnece gills, stalks vs pores",
         "cooking":{
-            "notes":"delicious,can be lightly sauteed and frozen, good as a main",
-            "recipes":["https://www.bonappetit.com/recipe/seared-maitake-mushrooms","https://veganinthefreezer.com/grilled-thai-marinated-maitake-mushrooms/"]
+            "notes":"tasty, chewy, good on it's own or mixed in,can be lightly sauteed and frozen, good as a main",
+            "recipes":["https://www.thesophisticatedcaveman.com/sauteed-chicken-of-the-woods/","https://foragerchef.com/chicken-fried-chicken-of-the-woods/"]
         },
         "resources":"links"
     }

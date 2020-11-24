@@ -108,4 +108,9 @@ async function lookupMushroom(){
     console.log(data);
 }
 
-https://www.youtube.com/watch?v=uxf0--uiX0I
+// https://www.youtube.com/watch?v=uxf0--uiX0I
+
+function guidePage(){
+
+
+}
