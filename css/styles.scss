@@ -1,3 +1,8 @@
+$modal-red: hsl(10,70,40);
+$titleFont: 'BioRhyme', serif;
+$subTitleFont: 'Quicksand', sans-serif;
+$serifBodyFont: 'Vollkorn', serif;
+
 html{
     height: 100%;
 }
@@ -6,7 +11,7 @@ body{
     margin: 0;
     height: 100%;
     /* width: auto; */
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat; 
     /* background-attachment: fixed; */
     /* not sure which are necessary */
     /*  https://stackoverflow.com/questions/27623777/how-to-not-repeat-a-css-background-gradient/27623904
@@ -15,8 +20,30 @@ body{
         https://forum.freecodecamp.org/t/solved-preventing-a-gradient-background-from-repeating/74090 */
 }
 
+h1, h2{
+    font-family: $titleFont;
+}
+
+ul{
+    list-style-type: none; /* Remove bullets */
+    // padding: 0; /* Remove padding */
+    // margin: 0; /* Remove margins */
+  }
+
+// is this a site wide decision or a varied choice?
+
+// ul.no-bullets {
+//     list-style-type: none; /* Remove bullets */
+//     padding: 0; /* Remove padding */
+//     margin: 0; /* Remove margins */
+//   }
+
+li{
+    font-family: $serifBodyFont;
+}
+
 .jumbotron{
-    font-family: 'BioRhyme', serif;
+    font-family: $titleFont;
     background-color: transparent;
     
          
@@ -30,7 +57,7 @@ font-family: 'Quicksand', sans-serif;
 font-family: 'Vollkorn', serif; */
 
 .anchor{
-    font-family: 'BioRhyme', serif;
+    font-family: $titleFont;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     text-orientation: sideways;
@@ -40,14 +67,19 @@ font-family: 'Vollkorn', serif; */
 }
 
 .navbar-nav{
-    font-family: 'BioRhyme', serif;
-    /* don't know why this doesn't work */
-    background: linear-gradient(to right, hsl(240,100,50),hsl(320,70,50));
-    background: linear-gradient(to right, red 20%, orange 20% 40%, yellow 40% 60%, green 60% 80%, blue 80%); 
+    font-family: $subTitleFont;
+    
 }
 
-ul.no-bullets {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
-  }
+
+
+.modal-content{
+    .modal-header{
+        background: $modal-red;
+        border: none;
+    }
+    .modal-body {
+        background: $modal-red;
+        color: white;
+    }
+}

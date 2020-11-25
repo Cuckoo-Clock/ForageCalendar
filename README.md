@@ -7,6 +7,7 @@
 
 ### todos el To Dos
 - [ ] work on favicon
+- [ ] re-work file tree for css, js & double check links in pages
 
 
 ### 1. Introduction
