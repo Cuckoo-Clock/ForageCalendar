@@ -14,6 +14,10 @@
         <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700;800&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,600;1,900&family=Quicksand:wght@300;400&family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
+       
+        <!-- test -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Montserrat&family=Quicksand:wght@300&family=Vollkorn&display=swap" rel="stylesheet">  -->
+       
         <!-- svg favicon only, add back up and safari compatible -->
         <!-- <link rel="mask-icon" href="mask-icon.svg" color="#000000"> -->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
@@ -22,16 +26,37 @@
     <body>
         <script>
             
-            $(document).ready(function(){
-                $('#thirdModal').modal('show');
-                $('#secondModal').modal('show');
-                $('#firstModal').modal('show');
+            // $(document).ready(function(){
+            //     $('#thirdModal').modal('show');
+            //     $('#secondModal').modal('show');
+            //     $('#firstModal').modal('show');
                 
-            });
+            // });
+
+            
+            
+
         
         </script>
         <header>
-            <nav class="navbar navbar-expand-sm navbar-light">        
+            <div class="container">
+                <div class="row">
+                    <div class="col text-right mt-3 mr-2">
+                        <h6 id="weather">weather:</h6 >
+                        <h6> based upon your location.</h6>
+                        <!-- direct from the mdn page -->
+                        <button id = "find-me">Update Location</button><br/>
+                        <p id = "status"></p>
+                        <a id = "map-link" target="_blank"></a>
+
+                        <!-- link to toggle open the location as a map -->
+                    </div>
+                </div>
+                
+                    
+                
+            </div>
+            <nav class="navbar navbar-expand-sm navbar-light sticky-top">        
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,6 +73,46 @@
                     </ul>
                 </div>
             </nav>
+
+            <!-- here's the small screen layout, but utilize the orderclass potentiallY? -->
+            
+            <!-- <div class="container">
+                <div class="row">
+                    
+                
+                    <div class="col">
+                    <nav class="navbar navbar-expand-sm navbar-light sticky-top">        
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="menuNavbar">
+                            <ul class="navbar-nav">
+                                    <li class="nav-item"> <a class="nav-link" href="index.html"> Calendar </a></li>
+                                    <li class="nav-item active"> <a class="nav-link" href="#"> Foraging Practices </a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="guide.html"> Mushroom Guide </a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="idassist.html"> ID Assist </a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="guide.html"> Links & Resources</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="publicLands.html"> Public Lands</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="blog.html"> Blog</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="logbook.html"> Logbook</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    </div>
+                    <div class="col text-right mt-1">
+                        <h6 id="weather">weather:</h6 >
+                        <h6> based upon your location.</h6>
+
+                        <!-- direct from the mdn page -->
+                        <!-- <button id = "find-me">Update Location</button><br/>
+                        <p id = "status"></p>
+                        <a id = "map-link" target="_blank"></a> -->
+
+                        <!-- link to toggle open the location as a map -->
+                    <!-- </div>
+                </div>
+            </div>  -->
+
         </header>
         <!-- triple warning modal -->
         <div class="modal hide fade" id="thirdModal" z-index="30">
@@ -118,15 +183,17 @@
         <!-- page contents -->
         <div class="container mt-1">
             <div class="row">
-                <h2>Preserving & Stewarding Habitat</h2>
-                <p>Labore ad consequat excepteur anim incididunt eiusmod cupidatat nostrud duis duis est commodo duis velit. Aute officia est cupidatat est anim quis reprehenderit ex cupidatat et ea. Duis laborum sunt do veniam adipisicing excepteur et culpa consequat id. Laboris amet exercitation nostrud do incididunt in aliquip sint anim irure ullamco id nisi aute.
+                <div class="col mx-2">
+                    <h2>Preserving & Stewarding Habitat</h2>
+                    <p>Labore ad consequat excepteur anim incididunt eiusmod cupidatat nostrud duis duis est commodo duis velit. Aute officia est cupidatat est anim quis reprehenderit ex cupidatat et ea. Duis laborum sunt do veniam adipisicing excepteur et culpa consequat id. Laboris amet exercitation nostrud do incididunt in aliquip sint anim irure ullamco id nisi aute.
 
-                Incididunt ex voluptate cillum aliqua eiusmod cillum occaecat mollit laborum. Ullamco sunt aute quis labore ipsum fugiat excepteur. Laborum dolore et nostrud qui excepteur quis ut irure sunt Lorem. Lorem id velit nulla irure et dolore tempor ea. Velit nisi eu Lorem commodo dolor veniam incididunt. Velit ex tempor ea ullamco dolor. Cillum cupidatat aliqua labore velit tempor consectetur labore exercitation ad aliqua ipsum ut velit.
-                </p>
+                    Incididunt ex voluptate cillum aliqua eiusmod cillum occaecat mollit laborum. Ullamco sunt aute quis labore ipsum fugiat excepteur. Laborum dolore et nostrud qui excepteur quis ut irure sunt Lorem. Lorem id velit nulla irure et dolore tempor ea. Velit nisi eu Lorem commodo dolor veniam incididunt. Velit ex tempor ea ullamco dolor. Cillum cupidatat aliqua labore velit tempor consectetur labore exercitation ad aliqua ipsum ut velit.
+                    </p>
+                </div>
             </div>
             <div class="row">
                 
-                <div class="col-12">
+                <div class="col-12 mx-2">
                     <h2>Key Idefication Charcteristics</h2> 
                 </div>
                 <div class="col-12">
@@ -161,24 +228,35 @@
                         </div>
                 </div>
 
-                <p>Ex magna commodo sint mollit aliquip incididunt qui. Eu id sint est ad commodo cillum ex eiusmod velit esse elit reprehenderit. Enim magna magna officia pariatur nostrud. Pariatur enim ipsum magna sunt. Quis ullamco adipisicing dolore velit reprehenderit et duis aliquip sit ullamco id ex fugiat.</p>
+                <div class="col mx-2">
+                    <p>Ex magna commodo sint mollit aliquip incididunt qui. Eu id sint est ad commodo cillum ex eiusmod velit esse elit reprehenderit. Enim magna magna officia pariatur nostrud. Pariatur enim ipsum magna sunt. Quis ullamco adipisicing dolore velit reprehenderit et duis aliquip sit ullamco id ex fugiat.</p>
+                </div>
             </div>
             <div class="row">
-                <h2>Season & Weather</h2>
-                <p>Lorem nisi voluptate dolore sunt commodo occaecat sit reprehenderit aliquip culpa deserunt nostrud. Adipisicing sunt quis culpa laborum exercitation tempor sunt laboris occaecat. Sit fugiat ad Lorem veniam commodo. Do aliqua in nostrud aliqua occaecat mollit amet sit ipsum nisi pariatur id consectetur eu. Magna labore occaecat culpa nisi occaecat sunt qui. Irure est cillum Lorem qui pariatur.</p>
+                <div class="col mx-2">
+                    <h2>Season & Weather</h2>
+                    <p>Lorem nisi voluptate dolore sunt commodo occaecat sit reprehenderit aliquip culpa deserunt nostrud. Adipisicing sunt quis culpa laborum exercitation tempor sunt laboris occaecat. Sit fugiat ad Lorem veniam commodo. Do aliqua in nostrud aliqua occaecat mollit amet sit ipsum nisi pariatur id consectetur eu. Magna labore occaecat culpa nisi occaecat sunt qui. Irure est cillum Lorem qui pariatur.</p>
+                </div>
+            </div>
+                
+            <div class="row">
+                <div class="col mx-2">
+                    <h2>Tools</h2>
+                </div>
             </div>
             <div class="row">
-                <h2>Tools</h2>
-                <ul>
-                    <li>knife</li>
-                    <li>bag/basket</li>
-                    <li>guide</li>
-                    <li>wax paper</li>
-                </ul>
+                <div class="col mx-2">
+                    <ul>
+                        <li>knife</li>
+                        <li>bag/basket</li>
+                        <li>guide</li>
+                        <li>wax paper</li>
+                    </ul>
                 <p>Ea anim occaecat commodo mollit tempor nisi aliqua cupidatat incididunt sunt dolore eiusmod. Enim consectetur fugiat ex anim. Ex mollit est do labore amet consectetur ex aute nostrud. Dolor duis laborum et duis in laborum. Do amet tempor pariatur proident cillum laborum culpa adipisicing sunt dolor.</p>
+                </div>
             </div>
             <!-- warning modal -->
-            <div class="row">
+            <div id="cooking" class="row">
                 <h2>Notes on cooking</h2>
                 <p>Dolor labore ullamco eiusmod esse non. Enim eu officia culpa eu ullamco ea culpa et. Laboris enim fugiat voluptate id adipisicing in consequat magna nisi nulla. Non labore consectetur qui elit eiusmod cillum ad tempor commodo esse. Sit nostrud est ad consectetur ex nostrud velit Lorem pariatur amet id officia tempor. Tempor ad non tempor sint pariatur excepteur eu sint Lorem.</p>
             </div>
@@ -209,6 +287,48 @@
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <!-- eventually put page script here and delete jqueary in header -->
+        <script>
+            function geoFindMe() {
+
+            const status = document.querySelector('#status');
+            const mapLink = document.querySelector('#map-link');
+
+            mapLink.href = '';
+            mapLink.textContent = '';
+
+            function success(position) {
+            const latitude  = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            status.textContent = '';
+            mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+            mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+            }
+
+            function error() {
+            status.textContent = 'Unable to retrieve your location';
+            }
+
+            if(!navigator.geolocation) {
+            status.textContent = 'Geolocation is not supported by your browser';
+            } else {
+            status.textContent = 'Locating…';
+            navigator.geolocation.getCurrentPosition(success, error);
+            }
+
+            }
+            
+            document.querySelector('#find-me').addEventListener('click', geoFindMe);
+            document.querySelector("#weather").innerHTML = "weather:" + "todays weather from api";
+            
+
+            document.querySelector('#cooking')
+            .addEventListener('scroll', function(event) {
+            console.log("Scrolling");
+            });
+
+
+        </script>
     </body>
 
 <html

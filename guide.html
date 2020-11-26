@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="descriptio" content="webpage for assiting in mushroom foraging in Rhode Island">
+        <meta name="author" content="Andrew Oesch">
+
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        
+        <title>RI Mushroom Forager</title>
+        <!-- favicons -->
+        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700;800&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,600;1,900&family=Quicksand:wght@300;400&family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
+       
+        <!-- test -->
+        <!-- <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Montserrat&family=Quicksand:wght@300&family=Vollkorn&display=swap" rel="stylesheet">  -->
+       
+        <!-- svg favicon only, add back up and safari compatible -->
+        <!-- <link rel="mask-icon" href="mask-icon.svg" color="#000000"> -->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    </head>
+   
+    <body>
+        <script>
+            
+            // $(document).ready(function(){
+            //     $('#thirdModal').modal('show');
+            //     $('#secondModal').modal('show');
+            //     $('#firstModal').modal('show');
+                
+            // });
+
+            
+            
+
+        
+        </script>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col text-right mt-3 mr-2">
+                        <h6 id="weather">weather:</h6 >
+                        <h6> based upon your location.</h6>
+                        <!-- direct from the mdn page -->
+                        <button id = "find-me">Update Location</button><br/>
+                        <p id = "status"></p>
+                        <a id = "map-link" target="_blank"></a>
+
+                        <!-- link to toggle open the location as a map -->
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-sm navbar-light sticky-top">        
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuNavbar">
+                    <ul class="navbar-nav">
+                            <li class="nav-item"> <a class="nav-link" href="index.html"> Calendar </a></li>
+                            <li class="nav-item active"> <a class="nav-link" href="#"> Foraging Practices </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="guide.html"> Mushroom Guide </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="idassist.html"> ID Assist </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="guide.html"> Links & Resources</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="publicLands.html"> Public Lands</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="blog.html"> Blog</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="logbook.html"> Logbook</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+              
+<!-- card deck? -->
+<!-- <div class="card-deck"> -->
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/197/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/237/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+                    
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/257/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/268/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/277/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/267/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+            </div>
+            </div class="row">
+                <div class="col w-100"></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/217/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/137/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/37/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/7/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        
+        
+        <!-- some sorta script to pull images from json
+            if it is tagged tastey, poisonous, forest inhabitant 
+            place in catergory with photo and binomial
+    
+        -->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
