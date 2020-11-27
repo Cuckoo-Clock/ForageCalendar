@@ -1,4 +1,4 @@
-{"mushrooms":[
+[
     {
         "binomial": "Grifola frondosa",
         "names": ["hen-of–the-woods","maitake","ram's head","sheep's head"],
@@ -11,7 +11,7 @@
         },
         "dangerFlag":"none",
         "lookAlikes":"berkley's polypore",
-        "edibility":["worth eating","edible","inedible","poisonous"],
+        "edibility":["delicious"],
         "cooking":{
             "notes":"delicious,can be lightly sauteed and frozen, good as a main",
             "recipes":["https://www.bonappetit.com/recipe/seared-maitake-mushrooms","https://veganinthefreezer.com/grilled-thai-marinated-maitake-mushrooms/"]
@@ -32,11 +32,33 @@
         },
         "dangerFlag":"mild, shouldn't be eaten raw, gastointestinal upset is reported",
         "lookAlikes":"The jackolantern, primary differnece gills, stalks vs pores",
+        "edibility":["delicious"],
         "cooking":{
             "notes":"tasty, chewy, good on it's own or mixed in,can be lightly sauteed and frozen, good as a main",
             "recipes":["https://www.thesophisticatedcaveman.com/sauteed-chicken-of-the-woods/","https://foragerchef.com/chicken-fried-chicken-of-the-woods/"]
         },
         "resources":"links"
+    },
+    {
+        "binomial": "Binomial Name",
+        "names": ["Folksy Name,WYSIWYG"],
+        "order":"polyporales",
+        "photo":"https://picsum.photos/id/437/200",
+        "photos":[],
+        "description":{
+            "habitat":"Laboris veniam labore nisi ullamco veniam occaecat esse et. Eu dolor adipisicing fugiat mollit dolore ullamco enim aliqua ipsum. Esse quis et quis id cillum esse.",
+            "characteristics":"Ut est aute sunt enim labore cillum. Esse tempor sint voluptate do culpa et irure sit ex. Do enim excepteur aliquip sint occaecat sunt ad.",
+            "notes":"Nulla aliqua ullamco eiusmod officia dolore laboris reprehenderit. Culpa mollit id dolore duis eiusmod. Ipsum eiusmod fugiat commodo nulla nostrud in sint fugiat voluptate ea Lorem excepteur ex minim. Velit do id nisi eiusmod id enim esse.",
+            "spore-print":"some color"
+        },
+        "dangerFlag":"will cause liver failure",
+        "lookAlikes":"many other beige mushrooms with gils",
+        "edibility":["poisonous"],
+        "cooking":{
+            "notes":"nope",
+            "recipes":"nope"
+        },
+        "resources":"links"
     }
 
-]}
+]

@@ -26,6 +26,8 @@
     <body>
         <script>
             
+            // DON"T FORGET TO SET TO ON
+
             // $(document).ready(function(){
             //     $('#thirdModal').modal('show');
             //     $('#secondModal').modal('show');
@@ -38,6 +40,8 @@
 
         
         </script>
+
+        <!-- make this look/work better... -->
         <header>
             <div class="container">
                 <div class="row">
@@ -73,10 +77,17 @@
         </header>
         <div class="container">
               
-<!-- card deck? -->
-<!-- <div class="card-deck"> -->
-
-            <div class="row">
+            <div id="delicious" class="row">
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-12 d-flex">
+                            <h1>Mushrooms to Forage</h1>
+                        </div>
+                        <div class="col d-none d-md-block">
+                            <p>Duis est adipisicing reprehenderit ut non incididunt commodo quis non. Eu voluptate et quis eu ullamco culpa ex ipsum nisi esse esse. Enim velit sunt ad nisi. Consequat eiusmod sint veniam eiusmod nulla adipisicing proident fugiat fugiat nisi nisi labore.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
@@ -143,8 +154,19 @@
                     </a>
                 </div>
             </div>
-            </div class="row">
-                <div class="col w-100"></div>
+            
+            
+            <div id="poisonous" class="row">
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-12 d-flex">
+                            <h1>Poisonous Mushrooms</h1>
+                        </div>
+                        <div class="col d-none d-md-block">
+                            <p>Nisi sit sint in incididunt exercitation laborum qui. Cillum voluptate duis irure voluptate laborum cupidatat in fugiat qui proident labore ut aute ut. Occaecat Lorem magna velit ipsum ut sunt mollit nulla id occaecat. </p>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
@@ -188,16 +210,120 @@
                         </div>  
                     </a>
                 </div>
-
             </div>
+
+            <div id="forestFungi" class="row">
+                <div class="col-12 mb-2">
+                    <div class="row">
+                        <div class="col-12 d-flex">
+                            <h1>More Fungi of the Forest</h1>
+                        </div>
+                        <div class="col d-none d-md-block">
+                            <p>Nisi sit sint in incididunt exercitation laborum qui. Cillum voluptate duis irure voluptate laborum cupidatat in fugiat qui proident labore ut aute ut. Occaecat Lorem magna velit ipsum ut sunt mollit nulla id occaecat. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/107/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/13/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <a href="/guidePage.html">
+                        <div class="card binomial text-white">
+                            <img src=https://picsum.photos/id/1/200 class="card-img">
+                            <div class="card-img-overlay" >
+                                <h4 class="card-title binomial"> Binomial Name</h4>
+                            </div> 
+                        </div>  
+                    </a>
+                </div>
+            </div>
+
         </div>
+
+        <div id="test" class="row">
+            <div class="col-12 mb-2">
+                <div class="row">
+                    <div class="col-12 d-flex">
+                        <h1>Test Area</h1>
+                    </div>
+                    <div class="col d-none d-md-block">
+                        <p>loading from json</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+    </div>
         
-        
-        <!-- some sorta script to pull images from json
-            if it is tagged tastey, poisonous, forest inhabitant 
-            place in catergory with photo and binomial
-    
-        -->
+        <script>
+            // fetch the JSON to populate the page
+
+            fetch("/mushroomIndex.json")
+            .then(function (response) {
+            return response.json()
+            })
+            .then(function (data) {        
+                // pull out
+                // binomial
+                // photo link
+                // catergory    
+                // edibility
+            let id;
+            for(var i = 0; i < data.length; i++){
+                if(data[i].edibility == 'poisonous'){
+                   id = 'test'
+                    // use the if to assigne this variable
+                }else if(data[i].edibility == 'delicious'){
+                    id = 'delicious';
+                }
+                var div1 = document.createElement("div");
+                var div2 = document.createElement("div");
+                var div3 = document.createElement("div");   
+                var h = document.createElement("h4");
+                    var img = document.createElement("img");
+                    
+
+                    h.innerHTML = data[i].binomial;
+                    h.className = 'card-title binomial';
+                    
+                    
+                    div1.innerHTML = h;
+                    div1.className = 'card-img-overlay';
+                    document.getElementById(id).appendChild(div1);
+
+                }
+            })
+                    // https://codereview.stackexchange.com/questions/156680/nesting-elements-with-appendchild
+                    
+                    
+                    // img.className='card-img';
+                    // img.src = data[i].photo;
+                    // div2.innterHTML = img;
+                    // div2.className = 'card binomial text-white'
+                    // div2.appendChild(div1);
+              
+        </script>
+
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

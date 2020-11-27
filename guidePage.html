@@ -17,3 +17,56 @@ list of look alikes
 cooking
     notes on flavor
     recipe link -->
+
+
+
+<script>
+    fetch("/mushroomIndex.json")
+    .then(function (response) {
+       return response.json()
+        // The JSON data will arrive here
+    })
+    .then(function (data) {
+    //   appendData(data)
+        // pull out
+        // binomial
+        // photo link
+        // catergory    
+        
+        //     var news = document.getElementsByClassName("news-story")[0];
+        
+        console.log(data);
+        console.log('pip' + data.length);
+        for(var i = 0; i < data.length; i++){
+            console.log(data[i]);
+            
+            
+            console.log(i);
+            console.log(data[i].binomial)
+            
+        }
+        
+    // for(var i = 0; i < items.length; i++) {
+    //     var h5 = document.createElement("h5");
+    //     h5.innerHTML = items[i].title;
+    //     news.appendChild(h5);
+    //     var p = document.createElement("p");
+    //     p.innerHTML = items[i].author;
+    //     news.appendChild(p);}
+
+
+
+        
+        // The JSON data will arrive here
+    })
+    .catch(function (err) {
+        console.log(err)
+        // If an error occured, you will catch it here
+    });
+
+
+
+
+    
+</script>
+
