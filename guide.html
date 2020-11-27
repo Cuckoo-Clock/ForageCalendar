@@ -278,16 +278,22 @@
         <script>
             // fetch the JSON to populate the page
 
+        function populateGuide(){
+
             fetch("/mushroomIndex.json")
             .then(function (response) {
             return response.json()
             })
             .then(function (data) {        
-                // pull out
-                // binomial
+                
+                var div1// binomial
                 // photo link
                 // catergory    
                 // edibility
+                
+                // dictionary?
+
+                ['h4':'card-title binomial','div':'card-img-overlay']
             let id;
             for(var i = 0; i < data.length; i++){
                 if(data[i].edibility == 'poisonous'){
@@ -296,6 +302,7 @@
                 }else if(data[i].edibility == 'delicious'){
                     id = 'delicious';
                 }
+
                 var div1 = document.createElement("div");
                 var div2 = document.createElement("div");
                 var div3 = document.createElement("div");   
@@ -321,7 +328,7 @@
                     // div2.innterHTML = img;
                     // div2.className = 'card binomial text-white'
                     // div2.appendChild(div1);
-              
+        }
         </script>
 
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
