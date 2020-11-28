@@ -259,18 +259,7 @@
 
         </div>
 
-        <div id="test" class="row">
-            <div class="col-12 mb-2">
-                <div class="row">
-                    <div class="col-12 d-flex">
-                        <h1>Test Area</h1>
-                    </div>
-                    <div class="col d-none d-md-block">
-                        <p>loading from json</p>
-                    </div>
-                </div>
-            </div>
-
+        
             
 
     </div>
@@ -293,30 +282,51 @@
                 
                 // dictionary?
 
-                ['h4':'card-title binomial','div':'card-img-overlay']
-            let id;
+                // ['h4':'card-title binomial','div':'card-img-overlay'];
+
+            
             for(var i = 0; i < data.length; i++){
+                let id;
                 if(data[i].edibility == 'poisonous'){
-                   id = 'test'
+                   id = '#poisonous'
                     // use the if to assigne this variable
                 }else if(data[i].edibility == 'delicious'){
-                    id = 'delicious';
+                    id = '#delicious';
+                }else{
+                    id = '#forestFungi';
                 }
+                var img = '<div class="col-sm-6 col-md-4 col-lg-3 mb-4"><a href="/guidePage.html"><div class="card binomial text-white"><img src='+data[i].photo+' class="card-img"><div class="card-img-overlay" ><h4 class="card-title binomial">'+data[i].name+'</h4></div></div></a><div>';
+                console.log(img);
+                console.log(id);
+                $(id).html(img);
 
-                var div1 = document.createElement("div");
-                var div2 = document.createElement("div");
-                var div3 = document.createElement("div");   
-                var h = document.createElement("h4");
-                    var img = document.createElement("img");
+                // var div1 = document.createElement("div");
+                // var div2 = document.createElement("div");
+                // var div3 = document.createElement("div");
+                // var a = document.createElement("a");   
+                // var h = document.createElement("h4");
+                // var img = document.createElement("img");
+                
+                //     div1.setAttribute('class','col-sm-6 col-md-4 col-lg-3 mb-4');
+                //     div1.setattribute('id',i);
+                //     document.getElementById(id).appendChild(div1);
+                    // a.setAttribute('href','/guidepage.html');
+                    // a.setAttribute('id',i);
+                    // document.getElementbyID
+                    // h.setAttribute('class', "card-title binomial");
+                    // h.innerHTML = data[i].binomial;
+                    // document.getElementById(i).appendChild(h);
+                    // h.className = 'card-title binomial';
                     
+                    
+                    // div1.innerHTML = h;
+                    // div1.className = 'card-img-overlay';
+                    // // document.getElementById(id).appendChild(div1);
+                    // document.querySelector(id).insertAdjacentHTML("beforebegin",'');
+                    // document.querySelector(id).insertAdjacentHTML("afterbegin",'');
+                    // document.querySelector(id).insertAdjacentHTML("beforeend",'');
+                    // document.querySelector(id).insertAdjacentHTML("afterend",'');
 
-                    h.innerHTML = data[i].binomial;
-                    h.className = 'card-title binomial';
-                    
-                    
-                    div1.innerHTML = h;
-                    div1.className = 'card-img-overlay';
-                    document.getElementById(id).appendChild(div1);
 
                 }
             })
@@ -329,6 +339,7 @@
                     // div2.className = 'card binomial text-white'
                     // div2.appendChild(div1);
         }
+        populateGuide();
         </script>
 
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
