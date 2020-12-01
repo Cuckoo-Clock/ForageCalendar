@@ -11,7 +11,7 @@
         
         <title>RI Mushroom Forager</title>
         <!-- favicons -->
-        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700;800&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,600;1,900&family=Quicksand:wght@300;400&family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
         <!-- svg favicon only, add back up and safari compatible -->
@@ -91,6 +91,21 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col text-right mt-3">
+                        <h6 id="weather">weather:</h6 >
+                        <!-- direct from the mdn page -->
+                        <button type="button" id="findMe" class="btn btn-sm btn-secondary">Update Location</button><br/>
+                        <p id = "status"></p>
+                        <a id = "map-link" target="_blank"></a>
+
+                        <!-- link to toggle open the location as a map -->
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>

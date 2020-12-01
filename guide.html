@@ -43,21 +43,8 @@
 
         <!-- make this look/work better... -->
         <header>
-            <div class="container">
-                <div class="row">
-                    <div class="col text-right mt-3 mr-2">
-                        <h6 id="weather">weather:</h6 >
-                        <h6> based upon your location.</h6>
-                        <!-- direct from the mdn page -->
-                        <button id = "find-me">Update Location</button><br/>
-                        <p id = "status"></p>
-                        <a id = "map-link" target="_blank"></a>
-
-                        <!-- link to toggle open the location as a map -->
-                    </div>
-                </div>
-            </div>
-            <nav class="navbar navbar-expand-sm navbar-light sticky-top">        
+          
+            <nav class="navbar navbar-expand-md navbar-light sticky-top">        
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -76,7 +63,7 @@
             </nav>
         </header>
         <div class="container">
-              
+                            
             <div id="delicious" class="row">
                 <div class="col-12 mb-2">
                     <div class="row">
@@ -259,20 +246,6 @@
 
         </div>
 
-        <div id="test" class="row">
-            <div class="col-12 mb-2">
-                <div class="row">
-                    <div class="col-12 d-flex">
-                        <h1>Test Area</h1>
-                    </div>
-                    <div class="col d-none d-md-block">
-                        <p>loading from json</p>
-                    </div>
-                </div>
-            </div>
-
-            
-
     </div>
         
         <script>
@@ -286,49 +259,9 @@
             })
             .then(function (data) {        
                 
-                var div1// binomial
-                // photo link
-                // catergory    
-                // edibility
-                
-                // dictionary?
-
-                ['h4':'card-title binomial','div':'card-img-overlay']
-            let id;
-            for(var i = 0; i < data.length; i++){
-                if(data[i].edibility == 'poisonous'){
-                   id = 'test'
-                    // use the if to assigne this variable
-                }else if(data[i].edibility == 'delicious'){
-                    id = 'delicious';
-                }
-
-                var div1 = document.createElement("div");
-                var div2 = document.createElement("div");
-                var div3 = document.createElement("div");   
-                var h = document.createElement("h4");
-                    var img = document.createElement("img");
-                    
-
-                    h.innerHTML = data[i].binomial;
-                    h.className = 'card-title binomial';
-                    
-                    
-                    div1.innerHTML = h;
-                    div1.className = 'card-img-overlay';
-                    document.getElementById(id).appendChild(div1);
-
-                }
+               
             })
-                    // https://codereview.stackexchange.com/questions/156680/nesting-elements-with-appendchild
-                    
-                    
-                    // img.className='card-img';
-                    // img.src = data[i].photo;
-                    // div2.innterHTML = img;
-                    // div2.className = 'card binomial text-white'
-                    // div2.appendChild(div1);
-        }
+        }   
         </script>
 
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>

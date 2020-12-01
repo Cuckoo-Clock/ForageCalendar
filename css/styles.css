@@ -30,6 +30,8 @@ li {
 .jumbotron, .nav-link {
   font-family: "BioRhyme", serif;
   background-color: transparent; }
+  .jumbotron h1, .jumbotron h2, .nav-link h1, .nav-link h2 {
+    font-family: "BioRhyme", serif; }
 
 /* FONTS */
 /* font-family: 'BioRhyme', serif;
@@ -67,26 +69,11 @@ font-family: 'Vollkorn', serif; */
   background: transparent;
   border: none; }
 
-.zoom-effect-container {
-  float: left;
-  position: relative;
-  width: 640px;
-  height: 360px;
-  margin: 0 auto;
-  overflow: hidden; }
-
-.image-card {
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.image-card img {
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease; }
-
-.zoom-effect-container:hover .image-card img {
-  -webkit-transform: scale(1.08);
-  transform: scale(1.08); }
+.card-footer {
+  background-color: rgba(34, 139, 34, 0.5);
+  font-family: "Vollkorn", serif; }
+  .card-footer a {
+    color: white; }
 
 .wrapper {
   display: grid;

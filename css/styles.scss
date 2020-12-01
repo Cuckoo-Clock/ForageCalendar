@@ -52,8 +52,12 @@ li{
 }
 
 .jumbotron, .nav-link{
+
     font-family: $titleFont;
     background-color: transparent;
+    h1,h2{
+        font-family: $titleFont;
+    }
 }
 
 /* FONTS */
@@ -106,6 +110,14 @@ font-family: 'Vollkorn', serif; */
    
 }
 
+.card-footer{
+    background-color: rgba(34, 139, 34,.5);
+    font-family: $serifBodyFont;
+    a{
+        color: white;
+    }
+    
+}
 
 
 
