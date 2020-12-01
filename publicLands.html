@@ -1,6 +1,3 @@
-<!-- leaflet.js
-https://www.youtube.com/watch?v=nZaZ2dB6pow -->
-
 <!DOCTYPE html>
 <html lang=en>
     <head>
@@ -39,11 +36,11 @@ https://www.youtube.com/watch?v=nZaZ2dB6pow -->
                 <div class="collapse navbar-collapse" id="menuNavbar">
                     <ul class="navbar-nav">
                             <li class="nav-item"> <a class="nav-link" href="index.html"> Calendar </a></li>
-                            <li class="nav-item active"> <a class="nav-link" href="#"> Foraging Practices </a></li>
+                            <li class="nav-item active"> <a class="nav-link" href="bestpractices.html"> Foraging Practices </a></li>
                             <li class="nav-item"> <a class="nav-link" href="guide.html"> Mushroom Guide </a></li>
                             <li class="nav-item"> <a class="nav-link" href="idassist.html"> ID Assist </a></li>
                             <li class="nav-item"> <a class="nav-link" href="guide.html"> Links & Resources</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="publicLands.html"> Public Lands</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="#"> Public Lands</a></li>
                             <li class="nav-item"> <a class="nav-link" href="blog.html"> Blog</a></li>
                             <li class="nav-item"> <a class="nav-link" href="logbook.html"> Logbook</a></li>
                     </ul>
@@ -172,8 +169,6 @@ https://www.youtube.com/watch?v=nZaZ2dB6pow -->
     const tiles = L.tileLayer(tileURL, {attribution});
     tiles.addTo(mymap);
 
-    //add a polygon to mask the rest of the map?
-
      // [0 park name, 1 url, 2 [long,lat], leafletjs zoom level ]
      const publicLandsList = [["Snake Den",[41.84680296, -71.533],14], ["South Kingston Land Trust",[41.407361, -71.584253],15], ["George Washington State Forest",[41.944297, -71.770591],13], ["Lincoln Woods",[41.897485, -71.431989],15],["Big River Management Area",[41.626606,-71.591892],13]];
      
@@ -203,40 +198,23 @@ https://www.youtube.com/watch?v=nZaZ2dB6pow -->
         mymap.removeLayer(markers);
     }
 
-    // document.querySelector('#mapid').addEventListener('mouseup',function(){markers.removeLayer()});
-    
-        //figure out how to turn off markers
+    // change to arrow function?
+    let zoom;
+    mymap.on('zoomstart',function(){
+        zoom = mymap.getZoom();
 
-    // let zoom = mymap.getZoom();
+        console.log(zoom);
+        if(zoom>=12){
+            mymap.removeLayer(markers);
+            }else if(zoom < 12){
+            markers.addTo(mymap);
+        }
+    })
 
-    // // updateMarkers();
-    // document.querySelector('#mapid').addEventListener('mouseup',function(){updateMarkers();});
-
-    // function updateMarkers(){
-    //     zoom = mymap.getZoom();
-    //     if(zoom>11){
-    //         // with pane method turn em off layer.getElement().style.display = 'none';
-    //         for(let i = 0; i < landLabels.length; i++){
-    //             landLabels[i].remove();
-                
-    //         }
-            
-    //     }else{
-            
-    //         for(let i = 0; i < landLabels.length; i++){
-    //         landLabels[i] = L.circle(publicLandsList[i][1], {
-    //         color: 'teal', // add to color ways
-    //         fillColor: 'cyan',
-    //         fillOpacity: 0.1,
-    //         radius: 1500 
-    //         }).addTo(mymap);
-    //         landLabels[i].bindPopup(publicLandsList[i][0]);
-    //         }   
-    //     }
-    // }
+   
     
    
-
+    // assign focus of map
     function changeMap([lat, lon], z){
         mymap.setView([lat,lon],z);
         }
@@ -244,7 +222,7 @@ https://www.youtube.com/watch?v=nZaZ2dB6pow -->
     //console helper function to find map location and zoom level
     function getLatLong(on){
         if(on){
-            document.querySelector('#mapid').addEventListener('mouseup',function(){console.log(mymap.getCenter(), mymap.getZoom())});
+            document.querySelector('#mapid').addEventListener('click',function(){console.log(mymap.getCenter(), mymap.getZoom())});
         }
         }
 
