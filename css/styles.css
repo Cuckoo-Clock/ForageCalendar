@@ -1,8 +1,3 @@
-/* FONTS */
-/* font-family: 'BioRhyme', serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Vollkorn', serif; */
 html {
   height: 100%; }
 
@@ -38,27 +33,49 @@ li {
   .jumbotron h1, .jumbotron h2, .nav-link h1, .nav-link h2 {
     font-family: "BioRhyme", serif; }
 
+.nav-link {
+  transition: 0.4s ease; }
+
+@media (min-width: 576px) {
+  .nav-link:hover {
+    transform: scale(1.1); } }
+
 @media (max-width: 767.98px) {
-  .nav-link {
-    transition: 0.4s ease; }
   .nav-link:hover {
     transform: translateX(50px) scale(1.15); } }
 
-.anchor {
-  font-family: "BioRhyme", serif;
+.sectionTitle {
   writing-mode: vertical-rl;
   transform: rotate(-180deg);
   text-orientation: sideways;
-  /* position: fixed; */
-  /* text-align: right; <-- not doing anything */ }
+  position: fixed;
+  right: 0vw;
+  top: 25vh;
+  border-right: 2px #c4bcbc dashed; }
+  .sectionTitle a {
+    color: #c4bcbc; }
+    .sectionTitle a h2 {
+      font-family: "BioRhyme", serif; }
 
-#cio {
+@media (max-width: 767.98px) {
+  .sectionTitle {
+    z-index: 1000;
+    transform: scale(0.7); } }
+
+#titleOverlay {
   background-image: linear-gradient(black 1% 5%, transparent);
   opacity: 0;
   transition: 0.3s ease; }
 
-#cio:hover, #cio:active {
+#titleOverlay:hover, #titleOverlay:active {
   opacity: 1; }
+
+.binomial {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  color: white;
+  background: transparent;
+  border: none; }
 
 .modal-content .modal-header {
   background: #ad361f;
@@ -67,13 +84,6 @@ li {
 .modal-content .modal-body {
   background: #ad361f;
   color: white; }
-
-.binomial {
-  font-family: "Vollkorn", serif;
-  font-style: italic;
-  color: white;
-  background: transparent;
-  border: none; }
 
 .card-footer {
   font-family: "Vollkorn", serif; }
@@ -116,33 +126,3 @@ li {
 
 .columnBondary {
   border-right: 2px rgba(128, 128, 128, 0.3) dashed; }
-
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  grid-auto-rows: minmax(100px, auto); }
-
-.one {
-  grid-column: 1 / 3;
-  grid-row: 1; }
-
-.two {
-  grid-column: 2 / 4;
-  grid-row: 1 / 3; }
-
-.three {
-  grid-column: 1;
-  grid-row: 2 / 5; }
-
-.four {
-  grid-column: 3;
-  grid-row: 3; }
-
-.five {
-  grid-column: 2;
-  grid-row: 4; }
-
-.six {
-  grid-column: 3;
-  grid-row: 4; }

@@ -1,27 +1,30 @@
-// autumn
-// $orange : rgb();
-// $rust : rgb();
-// $lichen : rgb();
-// $tan : rgb();
+// $palette: (
+  // autumn: (
+    // retitle with dark,base,light,lighter
+  //   $orange : rgb();
+  //   $rust : rgb();
+  //   $lichen : rgb();
+  //   $tan : rgb();
+  // ),
+  // winter: (
+    // $purple : rgb();
+    // $gray : rgb();
+    // $green : rgb();
+    // $burghundy : rgb();
+    // $cerrilium : rgb();
+  // ),
+  // spring: (
+    // $lime : rgb();
+    // $SpringGreen : rgb();
+    // $darkBrown : rgb();
+  // ),
 
-// // winter
-// $purple : rgb();
-// $gray : rgb();
-// $green : rgb();
-// $burghundy : rgb();
-// $cerrilium : rgb();
-
-// // spring
-// $lime : rgb();
-// $SpringGreen : rgb();
-// $darkBrown : rgb();
-
-
-// // summer
-// $fullGreen : rgb();
-// $yellow : rgb();
-// $auburn : rgb();
-
+  // summer: (
+  // $fullGreen : rgb();
+  // $yellow : rgb();
+  // $auburn : rgb();
+  // )
+// );
 //give the palettes a json structure
 
 // $palette: (
@@ -40,15 +43,6 @@
 // .banner{
 //   background-color: color(blue,base);
 //  }
-
-/* FONTS */
-/* font-family: 'BioRhyme', serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Vollkorn', serif; */
-@import "node_modules/bootstrap/scss/_functions.scss";
-@import "node_modules/bootstrap/scss/_variables.scss";
-@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
 
 
 @function color($color,$tone){
@@ -74,6 +68,12 @@ font-family: 'Vollkorn', serif; */
 
 /// but how do I update with date input?
 
+@import "node_modules/bootstrap/scss/_functions.scss";
+@import "node_modules/bootstrap/scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+
+
+
 $modal-red: hsl(10,70,40);
 $titleFont: 'BioRhyme', serif;
 $subTitleFont: 'Quicksand', sans-serif;
@@ -82,8 +82,11 @@ $serifBodyFont: 'Vollkorn', serif;
 $fontColor: white;
 $imgOverlayColor: black;
 
+///////////////////
+// General Styles
+
 html{
-    height: 100%;
+    height: 100%; //do i need this? it has to do with the gradient.
 }
 body{
     background-image:linear-gradient(rgba(255,165,55,.5) 80%, pink, white) ;
@@ -117,7 +120,7 @@ ul{
 
 // is this a site wide decision or a varied choice?
 
-// ul.no-bullets {
+// ul .no-bullets {
 //     list-style-type: none; /* Remove bullets */
 //     padding: 0; /* Remove padding */
 //     margin: 0; /* Remove margins */
@@ -126,6 +129,9 @@ ul{
 li{
     font-family: $serifBodyFont;
 }
+
+/////////////////////
+// Page Elements
 
 .jumbotron, .nav-link{
 
@@ -137,49 +143,74 @@ li{
     }
 }
 
-// add breakpoint for a seperate iteraction for non-dropdown
-@include media-breakpoint-down(sm){
-  .nav-link{
-    transition: 0.4s ease;
+.nav-link{
+  transition: 0.4s ease;
+}
+@include media-breakpoint-up(sm){
+  
+  .nav-link:hover{
+      transform: scale(1.1);
+      
   }
+}
+
+@include media-breakpoint-down(sm){
   .nav-link:hover{
       transform: translateX(50px) scale(1.15);
       
   }
 }
-// change this to sideTitle
-.anchor{
-    font-family: $titleFont;
+
+.sectionTitle{
+    
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     text-orientation: sideways;
-    /* position: fixed; */
-    /* text-align: right; <-- not doing anything */
+    
+   
+    position: fixed;
+    right: 0vw;
+    // bottom: 30vh;
+    top: 25vh;
+    border-right: 2px rgb(196, 188, 188) dashed;
+   
+    a{
+      h2{font-family: $titleFont;
+      }  
+      color: rgb(196, 188, 188);
+    }
+
     
 }
 
-// .card-img-overlay{
-//     background-image:linear-gradient($imgOverlayColor 1% 5%,transparent);
-//     opacity: 0;
-//     transition: 0.3s ease;
-    
-// }
+@include media-breakpoint-down(sm){
+  .sectionTitle{
+    z-index: 1000;
+    transform: scale(.7);
+}
 
-// .card-img-overlay:hover, .card-img-overlay:active{
-//     opacity: 1;
-// }
+}
 
-#cio{
+
+#titleOverlay{
   background-image:linear-gradient($imgOverlayColor 1% 5%,transparent);
   opacity: 0;
   transition: 0.3s ease;
   
 }
 
-#cio:hover, #cio:active{
+#titleOverlay:hover, #titleOverlay:active{
   opacity: 1;
 }
 
+.binomial{
+  font-family: $serifBodyFont;
+  font-style: italic;
+  color: $fontColor;
+  background: transparent; 
+  border:none;
+ 
+}
 
 .modal-content{
     .modal-header{
@@ -192,14 +223,7 @@ li{
     }
 }
 
-.binomial{
-    font-family: $serifBodyFont;
-    font-style: italic;
-    color: $fontColor;
-    background: transparent; 
-    border:none;
-   
-}
+
 .card-footer{
   font-family: $serifBodyFont;
 }
@@ -280,49 +304,3 @@ li{
 
 
 
-///////////////////////////////////////
-// currently unused ideas
-
-// css grid for blocks
-
-// <!-- css gird solution -->
-// <!-- <div class="wrapper">
-//     <div class="one">One</div>
-//     <div class="two">Two</div>
-//     <div class="three">Three</div>
-//     <div class="four">Four</div>
-//     <div class="five">Five</div>
-//     <div class="six">Six</div>
-//   </div> -->
-
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-  }
-  .one {
-    grid-column: 1 / 3;
-    grid-row: 1;
-  }
-  .two { 
-    grid-column: 2 / 4;
-    grid-row: 1 / 3;
-  }
-  .three {
-    grid-column: 1;
-    grid-row: 2 / 5;
-  }
-  .four {
-    grid-column: 3;
-    grid-row: 3;
-  }
-  .five {
-    grid-column: 2;
-    grid-row: 4;
-  }
-  .six {
-    grid-column: 3;
-    grid-row: 4;
-  }
