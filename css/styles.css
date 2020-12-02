@@ -1,3 +1,8 @@
+/* FONTS */
+/* font-family: 'BioRhyme', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Vollkorn', serif; */
 html {
   height: 100%; }
 
@@ -18,7 +23,7 @@ h1, h2 {
   font-family: "Quicksand", sans-serif; }
 
 p {
-  font-family: "Montserrat" sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 ul {
   list-style-type: none;
@@ -33,11 +38,12 @@ li {
   .jumbotron h1, .jumbotron h2, .nav-link h1, .nav-link h2 {
     font-family: "BioRhyme", serif; }
 
-/* FONTS */
-/* font-family: 'BioRhyme', serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Vollkorn', serif; */
+@media (max-width: 767.98px) {
+  .nav-link {
+    transition: 0.4s ease; }
+  .nav-link:hover {
+    transform: translateX(50px) scale(1.15); } }
+
 .anchor {
   font-family: "BioRhyme", serif;
   writing-mode: vertical-rl;
@@ -46,12 +52,12 @@ font-family: 'Vollkorn', serif; */
   /* position: fixed; */
   /* text-align: right; <-- not doing anything */ }
 
-.card-img-overlay {
+#cio {
   background-image: linear-gradient(black 1% 5%, transparent);
   opacity: 0;
   transition: 0.3s ease; }
 
-.card-img-overlay:hover, .card-img-overlay:active {
+#cio:hover, #cio:active {
   opacity: 1; }
 
 .modal-content .modal-header {
@@ -70,10 +76,46 @@ font-family: 'Vollkorn', serif; */
   border: none; }
 
 .card-footer {
+  font-family: "Vollkorn", serif; }
+
+#publicLands .card-footer {
   background-color: rgba(34, 139, 34, 0.5);
   font-family: "Vollkorn", serif; }
-  .card-footer a {
+  #publicLands .card-footer a {
     color: white; }
+
+.entries li {
+  transition: 0.4s ease;
+  text-align: right; }
+
+.entries li:hover {
+  transform: translateX(-10px) scale(1.15); }
+
+.blog .card-footer {
+  background-color: transparent;
+  border-top: 2px rgba(128, 128, 128, 0.3) dashed; }
+
+.blog .btn {
+  font-family: "Montserrat", sans-serif; }
+
+.blog .card {
+  border: none; }
+
+.blog .card-title {
+  font-family: "BioRhyme", serif;
+  background-color: white; }
+
+.blog .card-horizontal {
+  height: 80vh;
+  display: flex;
+  flex: 1 1 auto; }
+  .blog .card-horizontal img {
+    height: 80vh; }
+  .blog .card-horizontal .card-body {
+    overflow-y: scroll; }
+
+.columnBondary {
+  border-right: 2px rgba(128, 128, 128, 0.3) dashed; }
 
 .wrapper {
   display: grid;

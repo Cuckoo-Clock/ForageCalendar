@@ -48,16 +48,30 @@
             </nav>
         </header>
 
+        <!-- open topo map -->
+        <!-- https://opentopomap.org/#map=9/42.3504/-72.0717 -->
 
 <!-- change this size depending on viewport? -->
+<!-- i liked it spanning edge to edge? -->
+<!-- on lg screen put the links on the side? -->
         <!-- <div id='mapid' style="height: 600px;"></div> -->
        
 
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-md-12">
                 <div id='mapid' style="height: 600px;">
                 </div>
+            </div>
+            <div class="col-6">
+                <a id="locate" class="btn btn-lg">
+                    locate
+                </a>
+            </div>
+            <div class="col-6">
+                <a id="statewide" class="btn btn-lg">
+                    statewide view
+                </a>
             </div>
         </div>
         <div class="row">
@@ -66,7 +80,7 @@
                     <div class="card">
                         <div class="card-header" id="1">
                             <h2>
-                                <button id="snakeDen" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map1" aria-expanded="false" aria-controls="map1">
+                                <button id="snakeDen" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map1" aria-expanded="false" >
                                     Snake Den
                                 </button>
                             </h2>
@@ -83,7 +97,7 @@
                     <div class="card">
                         <div class="card-header" id="2">
                             <h2>
-                                <button id="SouthKingstonLandTrust" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map2" aria-expanded="false" aria-controls="map2">
+                                <button id="SouthKingstonLandTrust" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map2" aria-expanded="false" >
                                     South Kingston Land Trust
                                 </button>
                             </h2>
@@ -101,7 +115,7 @@
                     <div class="card">
                         <div class="card-header" id="tres">
                             <h2>
-                                <button id="georgeWashingtonStateForest" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map3" aria-expanded="false" aria-controls="map3">
+                                <button id="georgeWashingtonStateForest" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map3" aria-expanded="false" >
                                     George Washington State Forest
                                 </button>
                             </h2>
@@ -119,7 +133,7 @@
                     <div class="card">
                         <div class="card-header" id="4">
                             <h2>
-                                <button id="lincolnWoods" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map4" aria-expanded="false" aria-controls="map4">
+                                <button id="lincolnWoods" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map4" aria-expanded="false" >
                                     Lincoln Woods
                                 </button>
                             </h2>
@@ -137,7 +151,7 @@
                     <div class="card">
                         <div class="card-header" id="5">
                             <h2>
-                                <button id="bigRiverManagementArea" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map5" aria-expanded="false" aria-controls="map5">
+                                <button id="bigRiverManagementArea" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map5" aria-expanded="false" >
                                     Big River Management Area
                                 </button>
                             </h2>
@@ -226,7 +240,24 @@
         }
         }
 
+    // locate yourself
+    document.querySelector('#locate').addEventListener('click', function(){mymap.locate({setView: true, maxZoom: 16});});
+    document.querySelector('#statewide').addEventListener('click', function(){mymap.setView([41.7129, -71.4921], 9);});
+    
+    function onLocationFound(e) {
+        var radius = e.accuracy;
 
+        L.marker(e.latlng).addTo(mymap)
+            .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+        L.circle(e.latlng, radius).addTo(mymap);
+    }
+    function onLocationError(e) {
+    alert(e.message);
+    }
+
+    mymap.on('locationfound', onLocationFound);
+    mymap.on('locationerror', onLocationError);
     
     // relookat this to understand the function wrapper at the end.
     document.querySelector('#snakeDen').addEventListener('click', function(){changeMap([41.84680296, -71.533], 14);});

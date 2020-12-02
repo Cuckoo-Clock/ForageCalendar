@@ -1,32 +1,83 @@
 // autumn
-$orange = rgb();
-$rust = rgb();
-$lichen = rgb();
-$tan = rgb();
+// $orange : rgb();
+// $rust : rgb();
+// $lichen : rgb();
+// $tan : rgb();
 
-// winter
-$purple = rgb();
-$gray = rgb();
-$green = rgb();
-$burghundy = rgb();
-$cerrilium = rgb();
+// // winter
+// $purple : rgb();
+// $gray : rgb();
+// $green : rgb();
+// $burghundy : rgb();
+// $cerrilium : rgb();
 
-// spring
-$lime = rgb();
-$SpringGreen = rgb();
-$darkBrown = rgb();
+// // spring
+// $lime : rgb();
+// $SpringGreen : rgb();
+// $darkBrown : rgb();
 
 
-// summer
-$fullGreen = rgb();
-$yellow = rgb();
-$auburn = rgb();
+// // summer
+// $fullGreen : rgb();
+// $yellow : rgb();
+// $auburn : rgb();
 
+//give the palettes a json structure
+
+// $palette: (
+//     blue: (
+//         base:    #23778G,
+//         light:   #23778G,
+//         lighter: #48525C
+//     ),
+//     yellow: (
+//         base:   #ffa949,
+//         light:  #eda2fs
+//     )
+// );
+
+// call with function
+// .banner{
+//   background-color: color(blue,base);
+//  }
+
+/* FONTS */
+/* font-family: 'BioRhyme', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Vollkorn', serif; */
+@import "node_modules/bootstrap/scss/_functions.scss";
+@import "node_modules/bootstrap/scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+
+
+@function color($color,$tone){
+
+  @warn map-get($palettes,$color);
+
+  @if map-has-key($palettes,$color){
+      $color: map-get($palettes,$color);
+
+          @if map-has-key($color,$tone){
+              $tone: map-get($color,$tone);
+              @return $tone;
+          }
+
+          @warn "unknown tone `#{$tone}` in color";
+          @return null;        
+  }
+
+  @warn "unknown color `#{$color}` in palette";
+  @return null;
+ 
+}
+
+/// but how do I update with date input?
 
 $modal-red: hsl(10,70,40);
 $titleFont: 'BioRhyme', serif;
 $subTitleFont: 'Quicksand', sans-serif;
-$sansBodyFont: 'Montserrat' sans-serif;
+$sansBodyFont: 'Montserrat', sans-serif;
 $serifBodyFont: 'Vollkorn', serif;
 $fontColor: white;
 $imgOverlayColor: black;
@@ -80,17 +131,22 @@ li{
 
     font-family: $titleFont;
     background-color: transparent;
+    
     h1,h2{
         font-family: $titleFont;
     }
 }
 
-/* FONTS */
-/* font-family: 'BioRhyme', serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Vollkorn', serif; */
-
+// add breakpoint for a seperate iteraction for non-dropdown
+@include media-breakpoint-down(sm){
+  .nav-link{
+    transition: 0.4s ease;
+  }
+  .nav-link:hover{
+      transform: translateX(50px) scale(1.15);
+      
+  }
+}
 // change this to sideTitle
 .anchor{
     font-family: $titleFont;
@@ -102,17 +158,27 @@ font-family: 'Vollkorn', serif; */
     
 }
 
-.card-img-overlay{
-    background-image:linear-gradient($imgOverlayColor 1% 5%,transparent);
-    opacity: 0;
-    transition: 0.3s ease;
+// .card-img-overlay{
+//     background-image:linear-gradient($imgOverlayColor 1% 5%,transparent);
+//     opacity: 0;
+//     transition: 0.3s ease;
     
+// }
+
+// .card-img-overlay:hover, .card-img-overlay:active{
+//     opacity: 1;
+// }
+
+#cio{
+  background-image:linear-gradient($imgOverlayColor 1% 5%,transparent);
+  opacity: 0;
+  transition: 0.3s ease;
+  
 }
 
-.card-img-overlay:hover, .card-img-overlay:active{
-    opacity: 1;
+#cio:hover, #cio:active{
+  opacity: 1;
 }
-
 
 
 .modal-content{
@@ -134,15 +200,81 @@ font-family: 'Vollkorn', serif; */
     border:none;
    
 }
-
 .card-footer{
-    background-color: rgba(34, 139, 34,.5);
-    font-family: $serifBodyFont;
-    a{
-        color: white;
-    }
-    
+  font-family: $serifBodyFont;
 }
+
+#publicLands{
+  .card-footer{
+      background-color: rgba(34, 139, 34,.5);
+      font-family: $serifBodyFont;
+      a{
+          color: white;
+      }
+      
+  }
+}
+
+///////////////////
+// Blog stuff....
+
+.entries li{
+  transition: 0.4s ease;
+  text-align: right;
+}
+
+
+
+
+.entries li:hover{
+  transform: translateX(-10px) scale(1.15);
+}
+
+.blog{
+  .card-footer{
+    background-color: transparent;
+    border-top: 2px rgba(128,128,128,.3) dashed;
+     
+  }
+  
+  .btn{
+    font-family: $sansBodyFont;
+  }
+  
+  .card{
+    border: none;
+  }
+  
+  .card-title{
+    font-family: $titleFont;
+    background-color: white;
+  }
+
+  $horizontalHeight: 80vh;
+  .card-horizontal {
+    height: $horizontalHeight;
+    display: flex;
+    flex: 1 1 auto;
+    img{
+      height: $horizontalHeight;
+    }
+    .card-body{
+      overflow-y: scroll;
+    }
+  }
+  
+}
+
+// currently only used on the blog, perhaps should be an ID?
+
+.columnBondary{
+    border-right: 2px rgba(128,128,128,.3) dashed;
+    // position: sticky; //not sure about this.
+  
+    // to be explored further... later, svg border dashing
+// background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='gray' stroke-width='2' stroke-dasharray='15%2c 15%2c 1' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e"); 
+}
+
 
 
 
