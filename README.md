@@ -10,9 +10,16 @@
 
 ### todos el To Dos
 - [x] work on favicon
-- [ ] re-work file tree for css, js & double check links in pages
+- [ ] re-work legibility or css & js
 - [ ] fix menu sticky top
-- [ ] merge branches, carefully. devTemp is most update.
+- [ ] weather api
+- [ ] location api
+- [ ] modal on scroll
+- [ ] javascript calendar scrolling
+- [ ] id form
+- [ ] figure out photo attributions tracking, and sourcing photos
+- [x] in json, automate appending the directory for pulling image files
+* {this kinda happened...}
 
 ### 1. Introduction
 
