@@ -9,7 +9,7 @@
 [Figma Link](https://www.figma.com/file/BFYyoJnBJlD7sh3y5kPFSC/Mushroom-Forage-Calendar?node-id=0%3A1)
 
 ### todos el To Dos
-- [ ] work on favicon
+- [x] work on favicon
 - [ ] re-work file tree for css, js & double check links in pages
 - [ ] fix menu sticky top
 - [ ] merge branches, carefully. devTemp is most update.
