@@ -35,6 +35,7 @@
                 
             // });
 
+            // https://philipwalton.com/articles/what-no-one-told-you-about-z-index/
             
             
 
@@ -43,40 +44,31 @@
 
         <!-- make this look/work better... -->
         <header>
-            <div class="container">
-                <div class="row">
-                    <div class="col text-right mt-3 mr-2">
-                        <h6 id="weather">weather:</h6 >
-                        <h6> based upon your location.</h6>
-                        <!-- direct from the mdn page -->
-                        <button id = "find-me">Update Location</button><br/>
-                        <p id = "status"></p>
-                        <a id = "map-link" target="_blank"></a>
-
-                        <!-- link to toggle open the location as a map -->
-                    </div>
-                </div>
-            </div>
-            <nav class="navbar navbar-expand-sm navbar-light sticky-top">        
+          
+            <nav class="navbar navbar-expand-md navbar-light sticky-top">        
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menuNavbar">
                     <ul class="navbar-nav">
                             <li class="nav-item"> <a class="nav-link" href="index.html"> Calendar </a></li>
-                            <li class="nav-item active"> <a class="nav-link" href="#"> Foraging Practices </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="guide.html"> Mushroom Guide </a></li>
+                            <li class="nav-item active"> <a class="nav-link" href="bestpractices.html"> Foraging Practices </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="#"> Mushroom Guide </a></li>
                             <li class="nav-item"> <a class="nav-link" href="idassist.html"> ID Assist </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="guide.html"> Links & Resources</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="links.html"> Links & Resources</a></li>
                             <li class="nav-item"> <a class="nav-link" href="publicLands.html"> Public Lands</a></li>
                             <li class="nav-item"> <a class="nav-link" href="blog.html"> Blog</a></li>
                             <li class="nav-item"> <a class="nav-link" href="logbook.html"> Logbook</a></li>
                     </ul>
                 </div>
             </nav>
+
+            <div class="sectionTitle">
+                <a href="#"><h2>Mushroom Guide<h2></a>
+            </div>
         </header>
         <div class="container">
-              
+                            
             <div id="delicious" class="row">
                 <div class="col-12 mb-2">
                     <div class="row">
@@ -92,7 +84,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/197/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -103,7 +95,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/237/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -114,7 +106,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/257/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -125,7 +117,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/268/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -136,7 +128,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/277/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -147,7 +139,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/267/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -171,7 +163,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/217/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -182,7 +174,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/137/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -193,7 +185,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/37/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -204,7 +196,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/7/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -227,7 +219,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/107/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -238,7 +230,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/13/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -249,7 +241,7 @@
                     <a href="/guidePage.html">
                         <div class="card binomial text-white">
                             <img src=https://picsum.photos/id/1/200 class="card-img">
-                            <div class="card-img-overlay" >
+                            <div id="titleOverlay" class="card-img-overlay" >
                                 <h4 class="card-title binomial"> Binomial Name</h4>
                             </div> 
                         </div>  
@@ -259,8 +251,6 @@
 
         </div>
 
-        
-            
 
     </div>
         
@@ -275,6 +265,7 @@
             })
             .then(function (data) {        
                 
+
                 var div1// binomial
                 // photo link
                 // catergory    
@@ -340,6 +331,7 @@
                     // div2.appendChild(div1);
         }
         populateGuide();
+
         </script>
 
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>

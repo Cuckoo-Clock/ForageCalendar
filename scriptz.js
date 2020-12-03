@@ -36,25 +36,13 @@ function geoFindMe() {
       const latitude  = position.coords.latitude;
       const longitude = position.coords.longitude;
 
-    //   var xmlhttp = new XMLHttpRequest();
-    //   xmlhttp.onreadystatechange = function() {
-    //     if (this.readyState == 4 && this.status == 200) {
-    //         var myObj = JSON.parse(this.responseText);
-    //         document.getElementById("demo").innerHTML = myObj.name;
-    //     }
-    //   };
-    // xmlhttp.open("GET", "json_demo.txt", true);
-    // xmlhttp.send();
-
-
-
-    //   var weather = 
       fetch('https://api.weather.gov/points/'+latitude+','+longitude)
       .then(function(resp) { return resp.json() }) // Convert data to json
       .then(function(data) {
         console.log(data);}).catch(function(){});
-    
+        return
       }
+
     function error() {
       console.log('Unable to retrieve your location');
     }
@@ -65,12 +53,30 @@ function geoFindMe() {
       navigator.geolocation.getCurrentPosition(success, error);
     }
   
-  }
+}
+
+
+
+
+
+
+$(document).ready(
+  function(){
+    $('#findMe').click(function(){
+      console.log('menace');
+      geoFindMe();
+    });
   
-  document.querySelector('#find-me').addEventListener('click', geoFindMe);
+
+  }
+);
+
+
 
 
 // only run weaether once?
+
+// do while?
   function once(fn, context) { 
 	var result;
 
@@ -100,15 +106,8 @@ canOnlyFireOnce(); // nada
 // var myObj = JSON.parse(myJSON);
 // document.getElementById("demo").innerHTML = myObj.name;
 
-///////////////////////////
-lookupMushroom();
-async function lookupMushroom(){
-    const response = await fetch("mushroomIndex.json");
-    const data = await response.json();
-    console.log(data);
-}
-
-// https://www.youtube.com/watch?v=uxf0--uiX0I
+/////////////
+// guidePage
 
 function guidePage(){
 

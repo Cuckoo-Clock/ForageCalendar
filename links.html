@@ -1,12 +1,204 @@
-http://americanmushrooms.com/edibles4.htm
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="descriptio" content="webpage for assiting in mushroom foraging in Rhode Island">
+        <meta name="author" content="Andrew Oesch">
 
-https://www.scitechnol.com/peer-review/edible-and-nonedible-wild-mushrooms-nutrition-toxicity-and-strategies-for-recognition-dY0s.php?article_id=7395
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
 
-http://www.fungikingdom.net/mycology-education/edible-mushrooms--poisonous/index.html
-
-https://www.theatlantic.com/science/archive/2019/02/deadly-mushroom-arrives-canada/581602/
 
 
+        <title>RI Mushroom Forager</title>
+        <!-- favicons -->
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700;800&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,600;1,900&family=Quicksand:wght@300;400&family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
+        <!-- svg favicon only, add back up and safari compatible -->
+        <!-- <link rel="mask-icon" href="mask-icon.svg" color="#000000"> -->
+    </head>
 
-references from elsewhere on the site
-https://www.bayareamushrooms.org/education/further_reflections_amanita_muscaria.html
+    <body>
+        <header>
+          
+            <nav class="navbar navbar-expand-md navbar-light sticky-top">        
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuNavbar">
+                    <ul class="navbar-nav">
+                            <li class="nav-item"> <a class="nav-link" href="index.html"> Calendar </a></li>
+                            <li class="nav-item active"> <a class="nav-link" href="bestpractices.html"> Foraging Practices </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="guide.html"> Mushroom Guide </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="idassist.html"> ID Assist </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="#"> Links & Resources</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="publicLands.html"> Public Lands</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="blog.html"> Blog</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="logbook.html"> Logbook</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+        </header>
+        <div class="sectionTitle">
+            <a href="#"><h2>Links & Resources<h2></a>
+        </div>
+<!-- on small screen change to accordian? -->
+        <div class="container">
+            <div class="row d-none d-md-block">
+                <div class="col col-12 col-md-3 text-nowrap">
+                    <h2>Identification Resources</h2>
+                    <ul class="ident">
+            
+                    </ul>
+                </div>
+                <div class="col col-12 col-md-3 text-nowrap">
+                    <h2>Organizations</h2>
+                    <ul class="org">
+            
+                    </ul>
+                </div>
+                <div class="col col-12 col-lg-3 text-nowrap">
+                    <h2>Articles</h2>
+                    <ul class="article">
+            
+                    </ul>
+                </div>
+                <div class="col col-12 col-md-3 text-nowrap">
+                    <h2>Citations</h2>
+                    <ul class="citation">
+            
+                    </ul>
+                </div>
+            </div>
+            <!-- style to remove the block, or add photos to the backgrounds? perhaps library of congress assets-->
+            <div class="row d-block d-md-none">
+                <div class="accordian" id="externalResources">
+                    <div class="card" style="border: none;">
+                        <div class="card-header p-0">
+                            <img src="/assets/sporeID.jpg" alt="microscopic spores" style=" height:20vh; width:100%; object-fit: cover; object-position: 50% 60%;">
+                            
+                            <div class="card-img-overlay text-center" id="indentificationResources" >
+
+                                <a class="btn btn-link show align-middle" type="button" data-toggle="collapse" data-target="#idresources" aria-expanded="true" ><h2 class="card-title" style="color: white;">Identification Resources</h2></a>
+                            </div>
+                        </div>
+                        <div id="idresources" class="collapse"  data-parent="#externalResources">
+                            <div class="card-body" style="position: relative;">
+                                <ul class="ident">
+                                    
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                    
+                    <!-- https://stackoverflow.com/questions/60033466/problems-using-card-img-overlay-with-card-columns -->
+
+                    <div class="card">
+                        <div class="card-header text-center" id="organizationsHead">
+                            <a class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#organizations" aria-expanded="false"><h2 class="align-middle">Organizations</h2></a>
+                        </div>
+                        <div id="organizations" class="collapse"  data-parent="#externalResources">
+                            <div class="card-body">
+                                <ul class="org">
+                                    
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header text-center" id="articleHead">
+                            <a class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#articles" aria-expanded="false"><h2 class="align-middle">Articles</h2></a>
+                        </div>
+                        <div id="articles" class="collapse"  data-parent="#externalResources">
+                            <div class="card-body">
+                                <ul class="article">
+                                    
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header text-center" id="citationHead">
+                            <a class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#citations" aria-expanded="false" >
+                                <h2 class="align-middle">Citations</h2></a>
+                        </div>
+                        <div id="citations" class="collapse"  data-parent="#externalResources">
+                            <div class="card-body">
+                                <ul class="citation">
+                                    
+                                </ul>
+                            </div> 
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+       
+        
+        
+       
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        //[0-name,1-url,2-catergory:ident,org,citation,article]
+        const links = [
+            ['American Mushrooms','http://americanmushrooms.com/edibles4.htm','ident'],
+            ['Fungi Kingdom','http://www.fungikingdom.net/mycology-education/edible-mushrooms--poisonous/index.html','ident'],
+            ['Atlantic- "Deadly Mushroom Arrives Canada"','https://www.theatlantic.com/science/archive/2019/02/deadly-mushroom-arrives-canada/581602/','article'],
+            ['1. Further Reflections on Amanita Muscaria','https://www.bayareamushrooms.org/education/further_reflections_amanita_muscaria.html','citation'],
+            ['Edible and Non-Edible Wild Mushrooms: Nutrition, Toxicity and Strategies for Recognition','https://www.scitechnol.com/peer-review/edible-and-nonedible-wild-mushrooms-nutrition-toxicity-and-strategies-for-recognition-dY0s.php?article_id=7395','article']];
+        
+            
+
+        for(let i = 0; i<links.length; i++){
+            let  parentElClass = links[i][2];
+            let linkTag = document.createElement('li');
+            let link = document.createElement('a');
+            link.innerHTML = links[i][0];
+            link.href = links[i][1];
+            link.target = 'blank';
+            linkTag.innerHTML += link.outerHTML;
+            
+            let lists = document.getElementsByClassName(parentElClass);
+           
+            li1 = linkTag.cloneNode(true);
+            li2 = linkTag;
+
+            lists[0].appendChild(li1);
+            lists[1].appendChild(li2);
+            // for(let j = 0; j < lists.length; j++){
+            //     li = lists[j].appendChild(linkTag);
+            //     li.cloneNode(true);
+            // }
+            // https://stackoverflow.com/questions/36798005/append-multiple-items-in-javascript
+        }
+        
+    </script>
+
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
