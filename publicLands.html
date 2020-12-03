@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="descriptio" content="webpage for assiting in mushroom foraging in Rhode Island">
+        <meta name="author" content="Andrew Oesch">
+
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+
+
+        <title>RI Mushroom Forager</title>
+        <!-- favicons -->
+        <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700;800&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,600;1,900&family=Quicksand:wght@300;400&family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
+        <!-- svg favicon only, add back up and safari compatible -->
+        <!-- <link rel="mask-icon" href="mask-icon.svg" color="#000000"> -->
+    </head>
+
+    <body>
+        <header>
+          <!-- why isn't stickt top working? -->
+            <nav class="navbar navbar-expand-md navbar-light sticky-top">        
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuNavbar">
+                    <ul class="navbar-nav">
+                            <li class="nav-item"> <a class="nav-link" href="index.html"> Calendar </a></li>
+                            <li class="nav-item active"> <a class="nav-link" href="bestpractices.html"> Foraging Practices </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="guide.html"> Mushroom Guide </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="idassist.html"> ID Assist </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="links.html"> Links & Resources</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="#"> Public Lands</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="blog.html"> Blog</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="logbook.html"> Logbook</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sectionTitle">
+                <a href="#"><h2>Public Lands<h2></a>
+            </div>
+
+        </header>
+
+        <!-- open topo map -->
+        <!-- https://opentopomap.org/#map=9/42.3504/-72.0717 -->
+
+<!-- change this size depending on viewport? -->
+<!-- i liked it spanning edge to edge? -->
+<!-- on lg screen put the links on the side? -->
+        <!-- <div id='mapid' style="height: 600px;"></div> -->
+       
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id='mapid' style="height: 600px;">
+                </div>
+            </div>
+            <div class="col-6">
+                <a id="locate" class="btn btn-lg">
+                    locate
+                </a>
+            </div>
+            <div class="col-6">
+                <a id="statewide" class="btn btn-lg">
+                    statewide view
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col mt-5">
+                <div class="accordian" id="publicLands">
+                    <div class="card">
+                        <div class="card-header" id="1">
+                            <h2>
+                                <button id="snakeDen" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map1" aria-expanded="false" >
+                                    Snake Den
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="map1" class="collapse" aria-labelledby="mapOne" data-parent="#publicLands">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://riparks.com/Locations/LocationSnakeDen.html" target="_blank">Snake Den State Park</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="2">
+                            <h2>
+                                <button id="SouthKingstonLandTrust" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map2" aria-expanded="false" >
+                                    South Kingston Land Trust
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="map2" class="collapse" aria-labelledby="mapTwo" data-parent="#publicLands">
+                            <div class="card-body">
+                                Est nostrud non cupidatat dolore ut aute amet ad magna exercitation adipisicing dolore. Excepteur non ut occaecat deserunt esse incididunt Lorem ea elit adipisicing eiusmod deserunt. Id occaecat minim laboris ullamco culpa nostrud adipisicing. Pariatur do esse tempor do do. Aute do consectetur sit nulla eiusmod et id do ex.
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://sklt.org/" target="_blank">South Kingston Land Trust</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="tres">
+                            <h2>
+                                <button id="georgeWashingtonStateForest" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map3" aria-expanded="false" >
+                                    George Washington State Forest
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="map3" class="collapse" aria-labelledby="mapThree" data-parent="#publicLands">
+                            <div class="card-body">
+                                Sunt cupidatat sit nostrud officia laboris consectetur culpa sunt. Laborum velit amet consequat magna in consectetur quis ea ex fugiat id sit. Sint ullamco aliquip do ad tempor culpa nulla.
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://riparks.com/Locations/LocationGeorgeWashington.html" target="_blank">George Washington State Forest</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="4">
+                            <h2>
+                                <button id="lincolnWoods" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map4" aria-expanded="false" >
+                                    Lincoln Woods
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="map4" class="collapse" aria-labelledby="mapFour" data-parent="#publicLands">
+                            <div class="card-body">
+                                Reprehenderit nisi esse nisi nisi ipsum velit non incididunt tempor sit laborum esse elit. Dolor anim culpa dolore esse voluptate ullamco anim ex enim reprehenderit esse. Ex nisi ad enim veniam irure nostrud anim amet elit sit amet consequat cupidatat. Adipisicing culpa nisi nisi aliquip duis. Est nostrud reprehenderit reprehenderit consequat labore nisi do. Commodo fugiat veniam ea in laboris aute adipisicing reprehenderit nulla ad. Nisi in proident sunt duis aliquip culpa.
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://riparks.com/Locations/LocationLincolnWoods.html" target="_blank">Lincoln Woods</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <div class="card-header" id="5">
+                            <h2>
+                                <button id="bigRiverManagementArea" class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#map5" aria-expanded="false" >
+                                    Big River Management Area
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="map5" class="collapse" aria-labelledby="mapFour" data-parent="#publicLands">
+                            <div class="card-body">
+                                Velit enim nisi commodo non velit culpa. Qui sint officia proident est consectetur exercitation eu nisi sint minim ea labore. Sunt minim nulla ut Lorem. Tempor nostrud minim dolore veniam. Duis id enim aliqua ullamco magna magna veniam ad aute enim labore est sunt. Anim magna exercitation aliqua ea et velit eu eiusmod nisi deserunt.
+                            </div>
+                            <div class="card-footer">
+                                <a href="http://www.wrb.ri.gov/policy_guidelines_brmalanduse.html" target="_blank">Big River Management Area</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div></div></div>
+
+
+
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- <script src="scriptz.js"></script> -->
+<script>
+    const mymap = L.map('mapid').setView([41.7129, -71.4921], 9);
+    const attribution = '&copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap </a>contributors';
+    console.log(attribution);
+    const tileURL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    const tiles = L.tileLayer(tileURL, {attribution});
+    tiles.addTo(mymap);
+
+     // [0 park name, 1 url, 2 [long,lat], leafletjs zoom level ]
+     const publicLandsList = [["Snake Den",[41.84680296, -71.533],14], ["South Kingston Land Trust",[41.407361, -71.584253],15], ["George Washington State Forest",[41.944297, -71.770591],13], ["Lincoln Woods",[41.897485, -71.431989],15],["Big River Management Area",[41.626606,-71.591892],13]];
+     
+    let landLabels = [];
+    
+    for(let i = 0; i < publicLandsList.length; i++){
+        // camelCase name
+        let parkID = publicLandsList[i][0].charAt(0).toLowerCase()+publicLandsList[i][0].slice(1).replace(/ /g, '');
+        landLabels.push(parkID);
+
+        // make markers
+        for(let i = 0; i < landLabels.length; i++){
+        landLabels[i] = L.circle(publicLandsList[i][1], {
+        color: 'teal', // add to color ways
+        fillColor: 'cyan',
+        fillOpacity: 0.05,
+        radius: 1500 
+        })
+        landLabels[i].bindPopup(publicLandsList[i][0]);
+        }
+    }
+     // group for markers
+    let markers = L.layerGroup(landLabels);
+    markers.addTo(mymap);
+
+    function rootabega(){
+        mymap.removeLayer(markers);
+    }
+
+    // change to arrow function?
+    let zoom;
+    mymap.on('zoomstart',function(){
+        zoom = mymap.getZoom();
+
+        console.log(zoom);
+        if(zoom>=12){
+            mymap.removeLayer(markers);
+            }else if(zoom < 12){
+            markers.addTo(mymap);
+        }
+    })
+
+   
+    
+   
+    // assign focus of map
+    function changeMap([lat, lon], z){
+        mymap.setView([lat,lon],z);
+        }
+
+    //console helper function to find map location and zoom level
+    function getLatLong(on){
+        if(on){
+            document.querySelector('#mapid').addEventListener('click',function(){console.log(mymap.getCenter(), mymap.getZoom())});
+        }
+        }
+
+    // locate yourself
+    document.querySelector('#locate').addEventListener('click', function(){mymap.locate({setView: true, maxZoom: 16});});
+    document.querySelector('#statewide').addEventListener('click', function(){mymap.setView([41.7129, -71.4921], 9);});
+    
+    function onLocationFound(e) {
+        var radius = e.accuracy;
+
+        L.marker(e.latlng).addTo(mymap)
+            .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+        L.circle(e.latlng, radius).addTo(mymap);
+    }
+    function onLocationError(e) {
+    alert(e.message);
+    }
+
+    mymap.on('locationfound', onLocationFound);
+    mymap.on('locationerror', onLocationError);
+    
+    // relookat this to understand the function wrapper at the end.
+    document.querySelector('#snakeDen').addEventListener('click', function(){changeMap([41.84680296, -71.533], 14);});
+    document.querySelector('#SouthKingstonLandTrust').addEventListener('click', function(){changeMap([41.407361, -71.584253], 15);});
+    document.querySelector('#georgeWashingtonStateForest').addEventListener('click', function(){changeMap([41.944297, -71.770591], 13);});
+    document.querySelector('#lincolnWoods').addEventListener('click', function(){changeMap([41.897485, -71.431989], 15);});
+    document.querySelector('#bigRiverManagementArea').addEventListener('click', function(){changeMap([41.626606,-71.591892], 13);});
+
+</script>
+
+
+</body>
+</html>

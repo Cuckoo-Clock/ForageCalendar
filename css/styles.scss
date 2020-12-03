@@ -1,0 +1,306 @@
+// $palette: (
+  // autumn: (
+    // retitle with dark,base,light,lighter
+  //   $orange : rgb();
+  //   $rust : rgb();
+  //   $lichen : rgb();
+  //   $tan : rgb();
+  // ),
+  // winter: (
+    // $purple : rgb();
+    // $gray : rgb();
+    // $green : rgb();
+    // $burghundy : rgb();
+    // $cerrilium : rgb();
+  // ),
+  // spring: (
+    // $lime : rgb();
+    // $SpringGreen : rgb();
+    // $darkBrown : rgb();
+  // ),
+
+  // summer: (
+  // $fullGreen : rgb();
+  // $yellow : rgb();
+  // $auburn : rgb();
+  // )
+// );
+//give the palettes a json structure
+
+// $palette: (
+//     blue: (
+//         base:    #23778G,
+//         light:   #23778G,
+//         lighter: #48525C
+//     ),
+//     yellow: (
+//         base:   #ffa949,
+//         light:  #eda2fs
+//     )
+// );
+
+// call with function
+// .banner{
+//   background-color: color(blue,base);
+//  }
+
+
+@function color($color,$tone){
+
+  @warn map-get($palettes,$color);
+
+  @if map-has-key($palettes,$color){
+      $color: map-get($palettes,$color);
+
+          @if map-has-key($color,$tone){
+              $tone: map-get($color,$tone);
+              @return $tone;
+          }
+
+          @warn "unknown tone `#{$tone}` in color";
+          @return null;        
+  }
+
+  @warn "unknown color `#{$color}` in palette";
+  @return null;
+ 
+}
+
+/// but how do I update with date input?
+
+@import "node_modules/bootstrap/scss/_functions.scss";
+@import "node_modules/bootstrap/scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+
+
+
+$modal-red: hsl(10,70,40);
+$titleFont: 'BioRhyme', serif;
+$subTitleFont: 'Quicksand', sans-serif;
+$sansBodyFont: 'Montserrat', sans-serif;
+$serifBodyFont: 'Vollkorn', serif;
+$fontColor: white;
+$imgOverlayColor: black;
+
+///////////////////
+// General Styles
+
+html{
+    height: 100%; //do i need this? it has to do with the gradient.
+}
+body{
+    background-image:linear-gradient(rgba(255,165,55,.5) 80%, pink, white) ;
+    margin: 0;
+    height: 100%;
+    /* width: auto; */
+    background-repeat: no-repeat; 
+  
+    /* background-attachment: fixed; */
+    /* not sure which are necessary */
+    /*  https://stackoverflow.com/questions/27623777/how-to-not-repeat-a-css-background-gradient/27623904
+        https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats
+    
+        https://forum.freecodecamp.org/t/solved-preventing-a-gradient-background-from-repeating/74090 */
+}
+
+h1, h2{
+    font-family: $subTitleFont;
+}
+
+p{
+  font-family: $sansBodyFont;
+  
+}
+
+ul{
+    list-style-type: none; /* Remove bullets */
+    // padding: 0; /* Remove padding */
+    // margin: 0; /* Remove margins */
+  }
+
+// is this a site wide decision or a varied choice?
+
+// ul .no-bullets {
+//     list-style-type: none; /* Remove bullets */
+//     padding: 0; /* Remove padding */
+//     margin: 0; /* Remove margins */
+//   }
+
+li{
+    font-family: $serifBodyFont;
+}
+
+/////////////////////
+// Page Elements
+
+.jumbotron, .nav-link{
+
+    font-family: $titleFont;
+    background-color: transparent;
+    
+    h1,h2{
+        font-family: $titleFont;
+    }
+}
+
+.nav-link{
+  transition: 0.4s ease;
+}
+@include media-breakpoint-up(sm){
+  
+  .nav-link:hover{
+      transform: scale(1.1);
+      
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .nav-link:hover{
+      transform: translateX(50px) scale(1.15);
+      
+  }
+}
+
+.sectionTitle{
+    
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    text-orientation: sideways;
+    
+   
+    position: fixed;
+    right: 0vw;
+    // bottom: 30vh;
+    top: 25vh;
+    border-right: 2px rgb(196, 188, 188) dashed;
+   
+    a{
+      h2{font-family: $titleFont;
+      }  
+      color: rgb(196, 188, 188);
+    }
+
+    
+}
+
+@include media-breakpoint-down(sm){
+  .sectionTitle{
+    z-index: 1000;
+    transform: scale(.7);
+}
+
+}
+
+
+#titleOverlay{
+  background-image:linear-gradient($imgOverlayColor 1% 5%,transparent);
+  opacity: 0;
+  transition: 0.3s ease;
+  
+}
+
+#titleOverlay:hover, #titleOverlay:active{
+  opacity: 1;
+}
+
+.binomial{
+  font-family: $serifBodyFont;
+  font-style: italic;
+  color: $fontColor;
+  background: transparent; 
+  border:none;
+ 
+}
+
+.modal-content{
+    .modal-header{
+        background: $modal-red;
+        border: none;
+    }
+    .modal-body {
+        background: $modal-red;
+        color: white;
+    }
+}
+
+
+.card-footer{
+  font-family: $serifBodyFont;
+}
+
+#publicLands{
+  .card-footer{
+      background-color: rgba(34, 139, 34,.5);
+      font-family: $serifBodyFont;
+      a{
+          color: white;
+      }
+      
+  }
+}
+
+///////////////////
+// Blog stuff....
+
+.entries li{
+  transition: 0.4s ease;
+  text-align: right;
+}
+
+
+
+
+.entries li:hover{
+  transform: translateX(-10px) scale(1.15);
+}
+
+.blog{
+  .card-footer{
+    background-color: transparent;
+    border-top: 2px rgba(128,128,128,.3) dashed;
+     
+  }
+  
+  .btn{
+    font-family: $sansBodyFont;
+  }
+  
+  .card{
+    border: none;
+  }
+  
+  .card-title{
+    font-family: $titleFont;
+    background-color: white;
+  }
+
+  $horizontalHeight: 80vh;
+  .card-horizontal {
+    height: $horizontalHeight;
+    display: flex;
+    flex: 1 1 auto;
+    img{
+      height: $horizontalHeight;
+    }
+    .card-body{
+      overflow-y: scroll;
+    }
+  }
+  
+}
+
+// currently only used on the blog, perhaps should be an ID?
+
+.columnBondary{
+    border-right: 2px rgba(128,128,128,.3) dashed;
+    // position: sticky; //not sure about this.
+  
+    // to be explored further... later, svg border dashing
+// background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='gray' stroke-width='2' stroke-dasharray='15%2c 15%2c 1' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e"); 
+}
+
+
+
+
+
+

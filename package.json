@@ -5,15 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run lite",
-    "lite": "lite-server"
+    "scss": "node-sass -o css/ css/",
+    "start": "npm run watch:all",
+    "lite": "lite-server",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
   },
   "author": "Andrew Oesch",
   "license": "ISC",
   "devDependencies": {
     "install": "^0.13.0",
     "lite-server": "^2.5.4",
-    "npm": "^6.14.9"
+    "node-sass": "^4.14.1",
+    "npm": "^6.14.9",
+    "onchange": "^7.0.0",
+    "parallelshell": "3.0.1"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",

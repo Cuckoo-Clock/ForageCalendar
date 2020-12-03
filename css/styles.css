@@ -1,0 +1,128 @@
+html {
+  height: 100%; }
+
+body {
+  background-image: linear-gradient(rgba(255, 165, 55, 0.5) 80%, pink, white);
+  margin: 0;
+  height: 100%;
+  /* width: auto; */
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  /* not sure which are necessary */
+  /*  https://stackoverflow.com/questions/27623777/how-to-not-repeat-a-css-background-gradient/27623904
+        https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats
+    
+        https://forum.freecodecamp.org/t/solved-preventing-a-gradient-background-from-repeating/74090 */ }
+
+h1, h2 {
+  font-family: "Quicksand", sans-serif; }
+
+p {
+  font-family: "Montserrat", sans-serif; }
+
+ul {
+  list-style-type: none;
+  /* Remove bullets */ }
+
+li {
+  font-family: "Vollkorn", serif; }
+
+.jumbotron, .nav-link {
+  font-family: "BioRhyme", serif;
+  background-color: transparent; }
+  .jumbotron h1, .jumbotron h2, .nav-link h1, .nav-link h2 {
+    font-family: "BioRhyme", serif; }
+
+.nav-link {
+  transition: 0.4s ease; }
+
+@media (min-width: 576px) {
+  .nav-link:hover {
+    transform: scale(1.1); } }
+
+@media (max-width: 767.98px) {
+  .nav-link:hover {
+    transform: translateX(50px) scale(1.15); } }
+
+.sectionTitle {
+  writing-mode: vertical-rl;
+  transform: rotate(-180deg);
+  text-orientation: sideways;
+  position: fixed;
+  right: 0vw;
+  top: 25vh;
+  border-right: 2px #c4bcbc dashed; }
+  .sectionTitle a {
+    color: #c4bcbc; }
+    .sectionTitle a h2 {
+      font-family: "BioRhyme", serif; }
+
+@media (max-width: 767.98px) {
+  .sectionTitle {
+    z-index: 1000;
+    transform: scale(0.7); } }
+
+#titleOverlay {
+  background-image: linear-gradient(black 1% 5%, transparent);
+  opacity: 0;
+  transition: 0.3s ease; }
+
+#titleOverlay:hover, #titleOverlay:active {
+  opacity: 1; }
+
+.binomial {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  color: white;
+  background: transparent;
+  border: none; }
+
+.modal-content .modal-header {
+  background: #ad361f;
+  border: none; }
+
+.modal-content .modal-body {
+  background: #ad361f;
+  color: white; }
+
+.card-footer {
+  font-family: "Vollkorn", serif; }
+
+#publicLands .card-footer {
+  background-color: rgba(34, 139, 34, 0.5);
+  font-family: "Vollkorn", serif; }
+  #publicLands .card-footer a {
+    color: white; }
+
+.entries li {
+  transition: 0.4s ease;
+  text-align: right; }
+
+.entries li:hover {
+  transform: translateX(-10px) scale(1.15); }
+
+.blog .card-footer {
+  background-color: transparent;
+  border-top: 2px rgba(128, 128, 128, 0.3) dashed; }
+
+.blog .btn {
+  font-family: "Montserrat", sans-serif; }
+
+.blog .card {
+  border: none; }
+
+.blog .card-title {
+  font-family: "BioRhyme", serif;
+  background-color: white; }
+
+.blog .card-horizontal {
+  height: 80vh;
+  display: flex;
+  flex: 1 1 auto; }
+  .blog .card-horizontal img {
+    height: 80vh; }
+  .blog .card-horizontal .card-body {
+    overflow-y: scroll; }
+
+.columnBondary {
+  border-right: 2px rgba(128, 128, 128, 0.3) dashed; }
