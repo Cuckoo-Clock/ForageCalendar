@@ -11,7 +11,8 @@
 ### todos el To Dos
 - [ ] work on favicon
 - [ ] re-work file tree for css, js & double check links in pages
-
+- [ ] fix menu sticky top
+- [ ] merge branches, carefully. devTemp is most update.
 
 ### 1. Introduction
 
