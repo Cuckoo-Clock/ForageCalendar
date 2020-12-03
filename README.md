@@ -4,6 +4,9 @@
 ####  [UX and Navigation](#ux-and-navigation)
 ####  [Market Survey](#market-survey)
 ####  [References](#references)
+####  [Code References](#code)
+
+[Figma Link](https://www.figma.com/file/BFYyoJnBJlD7sh3y5kPFSC/Mushroom-Forage-Calendar?node-id=0%3A1)
 
 ### todos el To Dos
 - [ ] work on favicon
@@ -100,3 +103,11 @@ Ability for users to log in and keep a Personal Log where they can
 * [pay per use plant identification API](https://web.plant.id/plant-identification-api/)
   * Ordered for Priority of further exploration
 
+##### 5. Code References(#code)
+
+* [Dan shiffman brief intro usage of fetch and API's](https://www.youtube.com/watch?v=uxf0--uiX0I)
+* [Fetch & OpenWeatherMapAPI](https://bithacker.dev/fetch-weather-openweathermap-api-javascript)
+ * [An additional Weather API](https://medium.com/swlh/a-simple-javascript-weather-application-and-json-parsing-abd21ff0ea9a)
+* [OpenWeatherAPI](https://openweathermap.org/appid)
+* [National Weather Service API](https://www.weather.gov/documentation/services-web-api)
+* [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
