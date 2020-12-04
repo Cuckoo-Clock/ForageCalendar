@@ -83,8 +83,14 @@ Ability for users to log in and keep a Personal Log where they can
 * There is no end of printed calendars, cookbooks as well as other web resources... These provide a lot of strategies for organizing visual content.
 * A useful pdf is the [Forestry Services Field Guide](https://www.fs.fed.us/nrs/pubs/gtr/gtr_nrs79.pdf)
 
+#### some more inspiration
+[Groove Lust](https://www.awwwards.com/sites/grove-lust)
+[a laundry service](http://alfredservice.com/)
+[german blood & human rights campaign](http://buntspenden.bleech.de/en/)
 
-##### 4. References(#references)
+
+
+### 4. References(#references)
 ##### image inspiration
 [flora specimen page](https://www.loc.gov/resource/ppmsca.24849/)
 [Haeckel Illustration of Stinkhorns](https://www.loc.gov/item/2015648945/)
@@ -112,7 +118,13 @@ Ability for users to log in and keep a Personal Log where they can
 * [pay per use plant identification API](https://web.plant.id/plant-identification-api/)
   * Ordered for Priority of further exploration
 
-##### 5. Code References(#code)
+#### some other mushroom repos
+[json file of mushrooms](https://github.com/ahmadassaf/KBE/blob/master/results/dbpedia/Fungus.json)
+[someone elses starting project](https://github.com/harakka/sienikirja)
+[A developed front end project](https://github.com/The-Fun-Guys/FungusAmongUs)
+[mushrooms as a problem set?](https://github.com/NYUCCL/HorizonExperiments)
+
+### 5. Code References(#code)
 
 * [Dan shiffman brief intro usage of fetch and API's](https://www.youtube.com/watch?v=uxf0--uiX0I)
 * [Fetch & OpenWeatherMapAPI](https://bithacker.dev/fetch-weather-openweathermap-api-javascript)
@@ -120,3 +132,30 @@ Ability for users to log in and keep a Personal Log where they can
 * [OpenWeatherAPI](https://openweathermap.org/appid)
 * [National Weather Service API](https://www.weather.gov/documentation/services-web-api)
 * [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+* [three.js prerequisites speaks to deeper js learning](https://threejsfundamentals.org/threejs/lessons/threejs-prerequisites.html)
+
+#### scroll events
+[This](https://javascript.info/onscroll) & [this](https://flaviocopes.com/scrolling/)(a repitition, tho containing some crucial detailing), provide the basics for loading [bootstrap modal](https://getbootstrap.com/docs/4.0/components/modal/) on a scroll event.
+
+first I will need to get the top of an element as the marker, but then it should be
+something like
+
+```js
+let cached = null
+window.addEventListener('scroll', event => {
+  if (!cached) {
+    setTimeout(() => {
+      if(window,pageYOffset == top of element) //sudo pseudo code!
+          $('#myModal').modal(options)
+      cached = null
+    }, 1000)
+  }
+  cached = event
+})
+```
+
+other more complex animation and event tools.
+[GSAP](https://greensock.com/gsap/) Greensocks platform for web animations, a deep resource to be explored.
+[scrollmagic](https://scrollmagic.io/)
+
+
