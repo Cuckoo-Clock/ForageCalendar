@@ -133,6 +133,7 @@ Ability for users to log in and keep a Personal Log where they can
 * [National Weather Service API](https://www.weather.gov/documentation/services-web-api)
 * [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
 * [three.js prerequisites speaks to deeper js learning](https://threejsfundamentals.org/threejs/lessons/threejs-prerequisites.html)
+* [ternery operators](https://medium.com/javascript-in-plain-english/what-does-the-question-mark-mean-in-javascript-code-353cfadcf760)
 
 #### scroll events
 [This](https://javascript.info/onscroll) & [this](https://flaviocopes.com/scrolling/)(a repitition, tho containing some crucial detailing), provide the basics for loading [bootstrap modal](https://getbootstrap.com/docs/4.0/components/modal/) on a scroll event.
