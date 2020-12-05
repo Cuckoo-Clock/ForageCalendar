@@ -29,20 +29,20 @@
     <body>
         <header>
           
-            <nav class="navbar navbar-expand-md navbar-light sticky-top">        
+            <nav class="navbar navbar-expand-lg navbar-light sticky-top text-nowrap">        
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menuNavbar">
                     <ul class="navbar-nav">
                             <li class="nav-item"> <a class="nav-link" href="index.html"> Calendar </a></li>
-                            <li class="nav-item active"> <a class="nav-link" href="bestpractices.html"> Foraging Practices </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="bestpractices.html"> Foraging Practices </a></li>
                             <li class="nav-item"> <a class="nav-link" href="guide.html"> Mushroom Guide </a></li>
                             <li class="nav-item"> <a class="nav-link" href="idassist.html"> ID Assist </a></li>
                             <li class="nav-item"> <a class="nav-link" href="links.html"> Links & Resources</a></li>
                             <li class="nav-item"> <a class="nav-link" href="publicLands.html"> Public Lands</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="blog.html"> Blog</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#"> Logbook</a></li>
+                            <li class="nav-item active"> <a class="nav-link" href="#"> Blog</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="logbook.html"> Logbook</a></li>
                     </ul>
                 </div>
             </nav>
@@ -51,15 +51,27 @@
             </div>
         </header>
 
-        <form action="">
-            <input type="text">
-            <input type="text">
-        </form>
-
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form action="">
+                    <label for="">login</label>
+                    <input type="text">
+                    <label for="">pwd</label>
+                    <input type="text">
+                </form>
+        
+            </div>
+        </div>
+    </div>
+       
     </script>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-</body>
+    
+    </body>
+
 </html>

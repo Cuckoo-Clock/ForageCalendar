@@ -1,39 +1,49 @@
-html {
-  height: 100%; }
-
 body {
   background-image: linear-gradient(rgba(255, 165, 55, 0.5) 80%, pink, white);
-  margin: 0;
-  height: 100%;
-  /* width: auto; */
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  /* not sure which are necessary */
-  /*  https://stackoverflow.com/questions/27623777/how-to-not-repeat-a-css-background-gradient/27623904
-        https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats
-    
-        https://forum.freecodecamp.org/t/solved-preventing-a-gradient-background-from-repeating/74090 */ }
+  font-family: "Montserrat", sans-serif; }
 
 h1, h2 {
   font-family: "Quicksand", sans-serif; }
 
-p {
-  font-family: "Montserrat", sans-serif; }
-
 ul {
-  list-style-type: none;
-  /* Remove bullets */ }
+  list-style-type: none; }
 
-li {
-  font-family: "Vollkorn", serif; }
-
-.jumbotron, .nav-link {
-  font-family: "BioRhyme", serif;
-  background-color: transparent; }
-  .jumbotron h1, .jumbotron h2, .nav-link h1, .nav-link h2 {
+.masthead {
+  background-color: transparent;
+  margin-top: 1vh; }
+  .masthead h1, .masthead h2 {
     font-family: "BioRhyme", serif; }
 
+.calendar-img-circle {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 50vh;
+  width: 50vh; }
+
+.calendar-card {
+  background-color: transparent;
+  border: none;
+  transition: 0.6s ease-in-out; }
+
+.calendar-card-out {
+  transform: translate(-50vh, -40vh); }
+
+.image-label {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  color: white;
+  position: absolute;
+  bottom: -18%;
+  padding: 10px;
+  border-radius: 5px; }
+  .image-label h3 {
+    text-shadow: 1.5px 1.5px rgba(10, 78, 92, 0.7); }
+  .image-label p {
+    text-shadow: 0.5px 0.5px rgba(10, 78, 92, 0.9); }
+
 .nav-link {
+  font-family: "BioRhyme", serif;
   transition: 0.4s ease; }
 
 @media (min-width: 576px) {
@@ -96,7 +106,8 @@ li {
 
 .entries li {
   transition: 0.4s ease;
-  text-align: right; }
+  text-align: right;
+  font-family: "Vollkorn", serif; }
 
 .entries li:hover {
   transform: translateX(-10px) scale(1.15); }
@@ -104,9 +115,6 @@ li {
 .blog .card-footer {
   background-color: transparent;
   border-top: 2px rgba(128, 128, 128, 0.3) dashed; }
-
-.blog .btn {
-  font-family: "Montserrat", sans-serif; }
 
 .blog .card {
   border: none; }

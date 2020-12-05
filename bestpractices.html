@@ -15,170 +15,77 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700;800&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,600;1,900&family=Quicksand:wght@300;400&family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
        
-        <!-- test -->
-        <!-- <link href="https://fonts.googleapis.com/css2?family=BioRhyme&family=Montserrat&family=Quicksand:wght@300&family=Vollkorn&display=swap" rel="stylesheet">  -->
-       
-        <!-- svg favicon only, add back up and safari compatible -->
-        <!-- <link rel="mask-icon" href="mask-icon.svg" color="#000000"> -->
-        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        
     </head>
    
     <body>
-        <script>
-            
-            // $(document).ready(function(){
-            //     $('#thirdModal').modal('show');
-            //     $('#secondModal').modal('show');
-            //     $('#firstModal').modal('show');
-                
-            // });
-
-            
-            
-
-        
-        </script>
+      
         <header>
-            <div class="container">
-                <div class="row">
-                    <div class="col text-right mt-3 mr-2">
-                        <h6 id="weather">weather:</h6 >
-                        <h6> based upon your location.</h6>
-                        <!-- direct from the mdn page -->
-                        <button id = "find-me">Update Location</button><br/>
-                        <p id = "status"></p>
-                        <a id = "map-link" target="_blank"></a>
-
-                        <!-- link to toggle open the location as a map -->
-                    </div>
-                </div>
-                
-                    
-                
-            </div>
-            <nav class="navbar navbar-expand-sm navbar-light sticky-top">        
+            
+            <nav class="navbar navbar-expand-lg navbar-light sticky-top text-nowrap">        
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menuNavbar">
                     <ul class="navbar-nav">
                             <li class="nav-item"> <a class="nav-link" href="index.html"> Calendar </a></li>
-                            <li class="nav-item active"> <a class="nav-link" href="#"> Foraging Practices </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="bestpractices.html"> Foraging Practices </a></li>
                             <li class="nav-item"> <a class="nav-link" href="guide.html"> Mushroom Guide </a></li>
                             <li class="nav-item"> <a class="nav-link" href="idassist.html"> ID Assist </a></li>
                             <li class="nav-item"> <a class="nav-link" href="links.html"> Links & Resources</a></li>
                             <li class="nav-item"> <a class="nav-link" href="publicLands.html"> Public Lands</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="blog.html"> Blog</a></li>
+                            <li class="nav-item active"> <a class="nav-link" href="#"> Blog</a></li>
                             <li class="nav-item"> <a class="nav-link" href="logbook.html"> Logbook</a></li>
                     </ul>
                 </div>
             </nav>
 
-            <!-- here's the small screen layout, but utilize the orderclass potentiallY? -->
-            
-            <!-- <div class="container">
-                <div class="row">
-                    
-                
-                    <div class="col">
-                    <nav class="navbar navbar-expand-sm navbar-light sticky-top">        
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="menuNavbar">
-                            <ul class="navbar-nav">
-                                    <li class="nav-item"> <a class="nav-link" href="index.html"> Calendar </a></li>
-                                    <li class="nav-item active"> <a class="nav-link" href="#"> Foraging Practices </a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="guide.html"> Mushroom Guide </a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="idassist.html"> ID Assist </a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="guide.html"> Links & Resources</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="publicLands.html"> Public Lands</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="blog.html"> Blog</a></li>
-                                    <li class="nav-item"> <a class="nav-link" href="logbook.html"> Logbook</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                    </div>
-                    <div class="col text-right mt-1">
-                        <h6 id="weather">weather:</h6 >
-                        <h6> based upon your location.</h6>
-
-                        <!-- direct from the mdn page -->
-                        <!-- <button id = "find-me">Update Location</button><br/>
-                        <p id = "status"></p>
-                        <a id = "map-link" target="_blank"></a> -->
-
-                        <!-- link to toggle open the location as a map -->
-                    <!-- </div>
-                </div>
-            </div>  -->
-
         </header>
-        <!-- triple warning modal -->
-        <div class="modal hide fade" id="thirdModal" z-index="30">
+       
+        <div class="modal hide fade" id="firstModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1>¡Warning!</h1>
                         <a class="close" data-dismiss="modal">&times;</a>
                     </div>
-                    <div class="modal-body">
-                            <p>Don't eat a mushroom unless you are sure of identifictaion, the toxic risks can be severe to fatal, such as liver failure in a matter of days.</p>
+                    <div class="modal-body" style="height:80vh; overflow-y: scroll;">
+                            <p>Don't eat a mushroom unless you are sure of identifictaion, the risks can be severe to fatal, experiencing liver failure in a matter of days is simultaneously rapid and painfully long.</p>
                             
-                            <p>Check and double check identification, do a spore print, check all characteristics{stem,cap,base,growth pattern} thorouhjly against multiple sources. Even if you have found the species before, be thorough. Always be aware of potential look-alikes.</p>
+                            <ul>
+                                <li>Doubt is a useful asset, Check and double check identification.
+                                    </li>
+                                <li>Always do a spore print.</li>
+                                <li>Review all characteristics thorouhly against multiple sources. </li>
+                                <li>Even if you have found the species before, be thorough. </li>
+                                <li>Always be aware of potential look-alikes.</li> 
+                                <li>Thoroughly cook any wild mushrooms you plan to eat.</li>       
+                            </ul>
 
-                            <p>Go with a guide, we gain knowledge and experience through social structures.</p>
-                            
-                            <p>wash your hands, while you aren't going to be poisoned by touching a mushroom, if toxins can be transfered to your mouth if you are not careful.</p>
+                            <p>Wash your hands, while you aren't going to be poisoned by touching a mushroom, if toxins can be transfered to your mouth if you are not careful.</p>
 
-                            <p>if you collect multiple finds, it is a good practice to keep them seperated, especially if you pick anything you are uncertain of</p>
+                            <p>If you collect multiple finds, it is a good practice to keep them seperated, especially if you pick anything you are uncertain of.</p>
                     </div>
                 
                     
                 </div>
             </div>
         </div>
-        <div class="modal hide fade" id="secondModal" z-index="20">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        
-                        <h3>Notes on Eating</h3>
-                        <a class="close" data-dismiss="modal">&times;</a>
-                    </div>
-                    <div class="modal-body">
-                        <p>When eating mushrooms found in the wild, always cook them, do not consume them raw.even when certain about identification, begin with eating a tiny portion, each person may have a slightly different reaction.<p>
-
-                        In Rhode Islad there is a fine handful of delicious edible species that are distincly identifiable, if you are looking to find something for your table, eat those. Outside these forest delights there are also many varieties which have deadly toxic look-alikes, which require extreme diligence in identification, if this webpage is your first introduction to mushroom foraging these mushrooms are not for you. The consequences of indescretion is relatively swift, decidely unpleasant, and potentially fatal.
-
-                        <p>on our wonderful planet you can eat a lot of different things, but not all are worth eating. Portion-size matters<p>
-                        Anecdote over over consumption and toxicity --
-
-                        <p>heck multiple sources, guidebooks are continually being updated and mushroom varieties are being re-classified, theses changes can be contentious and are not all agreed upon.<a href="https://www.bayareamushrooms.org/education/further_reflections_amanita_muscaria.html"><sup>1</sup></a><p>
-                        Also finding a similar mushroom in another region the local variety may be slightly different. An example from around New England is the Lilac Brown Bolete(binomial)in Maine, guides in other regions of North America list this mushroom as edible.
-                        <a href=#ref1 data-dismiss="modal"><sup>2</sup></a></p>
-
-                        <!-- this still needs one more close modal action for the final modal 
-                        OR maybe these are replaced by tooltips? with external previews
-                        -->
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal hide fade" id="firstModal" z-index="10">
+        
+        <div class="modal hide fade" id="secondModal" z-index="10">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header ">
-                        
+                        <h1>¡Warning! ...again</h1>
                         <a class="close" data-dismiss="modal">&times;</a>
                     </div>
-                    <div class="modal-body">
-                        <h3>Forage with the discipline & thoughtfulness of your mind & senses... the hunger in your belly is an unreliable guide.</h3>
+                    <div class="modal-body pb-2">
+                        <h3>Forage with the discipline & thoughtfulness of your mind & senses. As well as the guidance of others... <br><br> Be wary of the hunger in your belly as a guide because it could be an overly optomistic.</h3>
                     </div>
                 </div>
             </div>
         </div>
+
                     
         <!-- page contents -->
         <div class="container mt-1">
@@ -257,19 +164,33 @@
             </div>
             <!-- warning modal -->
             <div id="cooking" class="row">
-                <h2>Notes on cooking</h2>
-                <p>Dolor labore ullamco eiusmod esse non. Enim eu officia culpa eu ullamco ea culpa et. Laboris enim fugiat voluptate id adipisicing in consequat magna nisi nulla. Non labore consectetur qui elit eiusmod cillum ad tempor commodo esse. Sit nostrud est ad consectetur ex nostrud velit Lorem pariatur amet id officia tempor. Tempor ad non tempor sint pariatur excepteur eu sint Lorem.</p>
+                <div class="col mx-2">
+                    <h2>Notes on cooking</h2>
+                    <p>When eating mushrooms found in the wild, always cook them, do not consume them raw.even when certain about identification, begin with eating a tiny portion, each person may have a slightly different reaction.<p>
+
+                    <p>
+                    In Rhode Islad there is a fine handful of delicious edible species that are distincly identifiable, if you are looking to find something for your table, eat those. Outside these forest delights there are also many varieties which have deadly toxic look-alikes, which require extreme diligence in identification, if this webpage is your first introduction to mushroom foraging these mushrooms are not for you. The consequences of indescretion is relatively swift, decidely unpleasant, and potentially fatal.</p>
+
+                    <p> Go with a guide,  we gain knowledge and experience through our social ties. On our wonderful planet you can eat a lot of different things, but not all are worth eating. Portion-size matters<p>
+                    Anecdote over over consumption and toxicity --
+
+                    <p>Check multiple sources, guidebooks are continually being updated and mushroom varieties are being re-classified, theses changes can be contentious and are not all agreed upon.<a href="https://www.bayareamushrooms.org/education/further_reflections_amanita_muscaria.html"><sup>1</sup></a><p>
+                    Also finding a similar mushroom in another region the local variety may be slightly different. An example from around New England is the Lilac Brown Bolete(binomial)in Maine, guides in other regions of North America list this mushroom as edible.
+                </div>
             </div>
         </div>
         <footer>
             <div class="container">
                 <div class="row">
-                     <!-- how to make this a link to show on d-none scenarios? answer make two scenarios which disappear at matching breakpoint-->
+                     
                     <div class="row">
-                        <div class="col-12 my-2">
+                        <!-- how to make this a link to show on d-none scenarios? answer make two scenarios which disappear at matching breakpoint-->
+                        <!-- <div class="col-12 my-2">
                        
                         <h6>References</h6>
-                        </div>
+                        </div> -->
+
+                        <!-- on largest screens make this a sidebar? -->
                     
                         <div class="col d-none d-sm-block mb-1">
                             <ol>
@@ -283,10 +204,46 @@
                 </div>
             </div>
         </footer>
-        <!-- <script src="node_modules/jquery/dist/jquery.slim.min.js"></script> -->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- eventually put page script here and delete jqueary in header -->
+        
+        
+
+        <script>
+            
+            // modal biz
+
+            // first modal
+            $(document).ready(function(){
+                $('#firstModal').modal('show');
+                
+            // cooking modal    
+                let elem = document.getElementById('cooking');
+                let coords = elem.getBoundingClientRect();
+                let windowHeight = document.documentElement.clientHeight;
+
+                let cached = null
+                let warned = true;
+                window.addEventListener('scroll', event => {
+                    if (!cached) {
+                    setTimeout(() => {
+                    if(coords.top <= scrollY){
+                        if(warned){
+                            $('#secondModal').modal('show');
+                            warned = false;
+                            }
+                    }
+                    cached = null
+                    }, 100)
+                }
+                cached = event
+                })
+
+            });
+        
+        </script>
+
         <script>
             function geoFindMe() {
 
@@ -318,14 +275,9 @@
 
             }
             
-            document.querySelector('#find-me').addEventListener('click', geoFindMe);
-            document.querySelector("#weather").innerHTML = "weather:" + "todays weather from api";
+            // document.querySelector('#find-me').addEventListener('click', geoFindMe);
+            // document.querySelector("#weather").innerHTML = "weather:" + "todays weather from api";
             
-
-            document.querySelector('#cooking')
-            .addEventListener('scroll', function(event) {
-            console.log("Scrolling");
-            });
 
 
         </script>

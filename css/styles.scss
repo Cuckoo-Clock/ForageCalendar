@@ -86,65 +86,77 @@ $imgOverlayColor: black;
 // General Styles
 
 html{
-    height: 100%; //do i need this? it has to do with the gradient.
+    // height: 100%; // why do i need this? it has to do with the gradient.
 }
+
 body{
-    background-image:linear-gradient(rgba(255,165,55,.5) 80%, pink, white) ;
-    margin: 0;
-    height: 100%;
-    /* width: auto; */
-    background-repeat: no-repeat; 
-  
-    /* background-attachment: fixed; */
-    /* not sure which are necessary */
-    /*  https://stackoverflow.com/questions/27623777/how-to-not-repeat-a-css-background-gradient/27623904
-        https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats
-    
-        https://forum.freecodecamp.org/t/solved-preventing-a-gradient-background-from-repeating/74090 */
+    background-image:linear-gradient(rgba(255,165,55,.5) 80%, pink, white);    
+    background-repeat: no-repeat;
+    font-family: $sansBodyFont;
 }
 
 h1, h2{
     font-family: $subTitleFont;
 }
 
-p{
-  font-family: $sansBodyFont;
-  
+ul{ 
+  list-style-type: none; 
 }
 
-ul{
-    list-style-type: none; /* Remove bullets */
-    // padding: 0; /* Remove padding */
-    // margin: 0; /* Remove margins */
-  }
-
-// is this a site wide decision or a varied choice?
-
-// ul .no-bullets {
-//     list-style-type: none; /* Remove bullets */
-//     padding: 0; /* Remove padding */
-//     margin: 0; /* Remove margins */
-//   }
-
-li{
-    font-family: $serifBodyFont;
-}
 
 /////////////////////
-// Page Elements
+// Page Components
 
-.jumbotron, .nav-link{
 
-    font-family: $titleFont;
+.masthead{
     background-color: transparent;
-    
-    h1,h2{
+    margin-top: 1vh;;
+    h1,h2{ //this is redundant? why isn't it inheriting?
         font-family: $titleFont;
     }
 }
 
+.calendar-img-circle{
+  border-radius: 50%;
+  object-fit: cover;
+  height: 50vh;
+  width: 50vh;
+}
+
+.calendar-card{
+  background-color: transparent;
+  border: none;
+  transition: 0.6s ease-in-out;
+}
+
+.calendar-card-out{
+  transform: translate(-50vh,-40vh);
+  
+}
+
+
+
+.image-label{
+    font-family: $serifBodyFont;
+    font-style: italic;
+    color: $fontColor;
+    position: absolute;
+    bottom: -18%;
+    padding: 10px;
+    border-radius: 5px;
+  h3{
+  text-shadow: 1.5px 1.5px hsla(190,80%,20%,.7);
+  }
+  p{text-shadow: .5px .5px hsla(190,80%,20%,.9);}
+ 
+}
+
+
+
 .nav-link{
+  font-family: $titleFont;
   transition: 0.4s ease;
+ 
 }
 @include media-breakpoint-up(sm){
   
@@ -166,16 +178,14 @@ li{
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     text-orientation: sideways;
-    
-   
     position: fixed;
     right: 0vw;
-    // bottom: 30vh;
     top: 25vh;
     border-right: 2px rgb(196, 188, 188) dashed;
-   
+    
     a{
       h2{font-family: $titleFont;
+        
       }  
       color: rgb(196, 188, 188);
     }
@@ -245,6 +255,7 @@ li{
 .entries li{
   transition: 0.4s ease;
   text-align: right;
+  font-family: $serifBodyFont;
 }
 
 
@@ -259,10 +270,6 @@ li{
     background-color: transparent;
     border-top: 2px rgba(128,128,128,.3) dashed;
      
-  }
-  
-  .btn{
-    font-family: $sansBodyFont;
   }
   
   .card{
