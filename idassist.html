@@ -29,36 +29,217 @@
     <body>
         <header>
           
-            <nav class="navbar navbar-expand-md navbar-light sticky-top">        
+            <nav class="navbar navbar-expand-lg navbar-light sticky-top text-nowrap">        
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="menuNavbar">
                     <ul class="navbar-nav">
                             <li class="nav-item"> <a class="nav-link" href="index.html"> Calendar </a></li>
-                            <li class="nav-item active"> <a class="nav-link" href="bestpractices.html"> Foraging Practices </a></li>
+                            <li class="nav-item"> <a class="nav-link" href="bestpractices.html"> Foraging Practices </a></li>
                             <li class="nav-item"> <a class="nav-link" href="guide.html"> Mushroom Guide </a></li>
-                            <li class="nav-item"> <a class="nav-link" href="#"> ID Assist </a></li>
+                            <li class="nav-item active"> <a class="nav-link" href="#"> ID Assist </a></li>
                             <li class="nav-item"> <a class="nav-link" href="links.html"> Links & Resources</a></li>
                             <li class="nav-item"> <a class="nav-link" href="publicLands.html"> Public Lands</a></li>
                             <li class="nav-item"> <a class="nav-link" href="blog.html"> Blog</a></li>
-                            <li class="nav-item"> <a class="nav-link" href="logbook.html"> Logbook</a></li>
+                            <li class="nav-item"> <a id="loginButton"class="nav-link" href="#"> Logbook</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
 
-        <h1>Id tool</h1>
-        <p>Nisi velit eu quis veniam consectetur officia. Excepteur ipsum officia ut commodo consectetur aliqua commodo id aute consequat nisi aliqua. Et occaecat fugiat et quis Lorem cillum. Laborum commodo adipisicing sit duis cupidatat dolore irure ea irure officia eu eu duis anim. Officia laborum qui aute ullamco nisi anim officia minim deserunt eu. Tempor in aliqua aute esse ut cillum nulla aliquip.</p>
-        <form action="">
-            <input type="text">
-            <input type="text">
-        </form>
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-4 col-xl-6">
+                    <h1>Id tool</h1>
+                    <p>Nisi velit eu quis veniam consectetur officia. Excepteur ipsum officia ut commodo consectetur aliqua commodo id aute consequat nisi aliqua. Et occaecat fugiat et quis Lorem cillum. Laborum commodo adipisicing sit duis cupidatat dolore irure ea irure officia eu eu duis anim. Officia laborum qui aute ullamco nisi anim officia minim deserunt eu. Tempor in aliqua aute esse ut cillum nulla aliquip.</p>
+                    <div class="form-check">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input">
+                            <label class="form-check-label">some option</label>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-sm-6 col-form-label">
+                            <label for="numCampers">Some sorta Characteristic</label>
+                        </div>
+                        <div class="col">
+                            <select class="form-control" name="Campers" id="numCampers">
+                                <option value="">Select</option>                                            
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">it's brown</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                    </div>
 
-    </script>
+                    <div class="row form-group">
+                        <div class="col-sm-6 col-form-label">
+                            <label for="numCampers">Another Characteristic</label>
+                        </div>
+                        <div class="col">
+                            <select class="form-control" name="Campers" id="numCampers">
+                                <option value="">Select</option>                                            
+                                <option value="1">describey 1</option>
+                                <option value="2">describey 2</option>
+                                <option value="3">so on... </option>
+                                <option value="4">and so forth...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <a id="pickAwinner" type="submit" class="btn btn-secondary btn-sm ml-1">Submit</a>
+                    </div>
+                </div>
+            
+
+                <div class="d-none col-md-6 d-md-block">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Visual reference from the <a href="guide.html">Guide</a></h3>
+                        </div>
+                    </div>
+                    <div class="row" style="height: 70vh; overflow-y: scroll; ">
+                        <div class="col-md-6 mb-4">
+                            <a href="/guidePage.html">
+                                <div class="card binomial">
+                                    <img src=https://picsum.photos/id/197/300 class="card-img">
+                                    <p class="card-body text-nowrap">Binomial Name</p>
+                                </div>  
+                            </a>
+                        </div>
+        
+                        <div class="col-md-6  mb-2">
+                            <a href="/guidePage.html">
+                                <div class="card binomial">
+                                    <img src=https://picsum.photos/id/237/300 class="card-img">
+                                    <p class="card-body text-nowrap">Binomial Name</p>
+                                </div>  
+                            </a>
+                        </div>
+
+                        <div class="col-md-6  mb-2">
+                            <a href="/guidePage.html">
+                                <div class="card binomial">
+                                    <img src=https://picsum.photos/id/237/300 class="card-img">
+                                    <p class="card-body text-nowrap">Binomial Name</p> 
+                                </div>  
+                            </a>
+                        </div>
+
+                        <div class="col-md-6  mb-2">
+                            <a href="/guidePage.html">
+                                <div class="card binomial">
+                                    <img src=https://picsum.photos/id/237/300 class="card-img">
+                                    <p class="card-body text-nowrap">Binomial Name</p> 
+                                </div>  
+                            </a>
+                        </div>
+                        <div class="col-md-6  mb-2">
+                            <a href="/guidePage.html">
+                                <div class="card binomial">
+                                    <img src=https://picsum.photos/id/237/300 class="card-img">
+                                    <p class="card-body text-nowrap">Binomial Name</p> 
+                                </div>  
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end body container -->
+        </div> 
+
+
+
+
+
+     
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Login</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-12">
+                                        <label class="sr-only" for="loginEmail">Email Address </label>
+                                        <input type="email" class="form-control-sm" id="loginEmail" placeholder="Enter Email">
+                                    </div>
+                                    <div class="form-froup col-12">
+                                        <label class="sr-only" for="loginPassword">Password</label>
+                                        <input type="password" id="loginPassword" class="form-control form-control-sm" placeholder="Password">
+                                    </div>
+                                    <div class="form-check">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input">
+                                            <label class="form-check-label">Remember me</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <button type="button" class="btn btn-warning btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <a href="logbook.html" type="submit" class="btn btn-secondary btn-sm ml-1">Login</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="mushroomMatch" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Potential Mushroom Match</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="guidePage.html">
+                                        <img class="calendar-img-circle" src=https://picsum.photos/id/89/200 class="card-img">
+                                        <h4><i> Mushroomy mushroomitus</i></h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+
+  
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script> 
+        $("#loginButton").click(function(){
+        
+        $('#loginModal').modal('show');
+        s});
+
+        $("#pickAwinner").click(function(){
+        
+        $('#mushroomMatch').modal('show');
+        s});
+
+    </script>  
+
 </body>
 </html>

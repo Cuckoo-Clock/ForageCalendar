@@ -1,5 +1,8 @@
+html {
+  height: 100%; }
+
 body {
-  background-image: linear-gradient(rgba(255, 165, 55, 0.5) 80%, pink, white);
+  background-image: linear-gradient(rgba(255, 165, 55, 0.5) 60%, #ddb0b8 80%, #efe5d7);
   background-repeat: no-repeat;
   font-family: "Montserrat", sans-serif; }
 
@@ -38,17 +41,25 @@ ul {
   padding: 10px;
   border-radius: 5px; }
   .image-label h3 {
-    text-shadow: 1.5px 1.5px rgba(10, 78, 92, 0.7); }
+    text-shadow: 0.75px 0.75px rgba(77, 162, 179, 0.7); }
   .image-label p {
-    text-shadow: 0.5px 0.5px rgba(10, 78, 92, 0.9); }
+    text-shadow: 0.5px 0.5px rgba(83, 157, 172, 0.9); }
+
+.navbar {
+  position: sticky;
+  top: 0; }
 
 .nav-link {
   font-family: "BioRhyme", serif;
   transition: 0.4s ease; }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .nav-link:hover {
     transform: scale(1.1); } }
+
+@media (max-width: 991.98px) {
+  .nav-link:hover {
+    transform: translateX(60px) scale(1.15); } }
 
 @media (max-width: 767.98px) {
   .nav-link:hover {
@@ -87,20 +98,35 @@ ul {
   background: transparent;
   border: none; }
 
-.modal-content .modal-header {
-  background: #ad361f;
+.warning .modal-content {
   border: none; }
+  .warning .modal-content .modal-header {
+    background: #ad361f; }
+  .warning .modal-content .modal-body {
+    background: #ad361f;
+    color: white; }
 
-.modal-content .modal-body {
-  background: #ad361f;
+.modal-content {
+  border: 4px rgba(159, 157, 157, 0.3) dashed;
+  background-image: linear-gradient(#d9af54 10%, #d7be88);
   color: white; }
+  .modal-content .modal-header {
+    border-bottom: 2px rgba(128, 128, 128, 0.3) dashed; }
+  .modal-content .btn {
+    background-color: lightgray;
+    border: 1px rgba(128, 128, 128, 0.3) solid; }
 
 .card-footer {
   font-family: "Vollkorn", serif; }
 
+#publicLands .card-header button {
+  color: #485652; }
+
 #publicLands .card-footer {
   background-color: rgba(34, 139, 34, 0.5);
-  font-family: "Vollkorn", serif; }
+  font-family: "Vollkorn", serif;
+  text-decoration: underline;
+  text-decoration-color: white; }
   #publicLands .card-footer a {
     color: white; }
 
